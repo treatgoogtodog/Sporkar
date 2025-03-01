@@ -5,31 +5,27 @@
 
 using namespace std;
 
+enum TYPE
+	{
+		GROUND, WALL, NPC
+
+};
 class instance
 {
 public:
-	enum TYPE
-	{
-		GROUND, WALL, PLAYER, NPC
-	};
+
+	instance(int INPUTx, int INPUTy, int INPUT_XSIZE, int INPUT_YSIZE, bool SOLID, TYPE OBJ_TYPE) : x(INPUTx), y(INPUTy), x_size(INPUT_XSIZE), y_size(INPUT_YSIZE), is_solid(SOLID), type(OBJ_TYPE) {};
+
+	
 
 	int x, y;
 	int x_size, y_size;
 	bool is_solid;
 	TYPE type;
 	
-	vector <instance> instance_list;
+	static vector <instance> instance_list;
 
-	void instance_update_other(instance &a)
-	{
-		instance* ptr1 = this;
-		instance* ptr2 = &a;
-		if (ptr1 != ptr2) {
-			instance_list.push_back(a);
-		}
-	}
-
-	instance* check_place(const vector<instance> &instance_list)
+	const instance* check_place(const vector<instance> &instance_list)
 	{
 		for (const instance& i : instance_list)
 		{
@@ -49,23 +45,35 @@ public:
 
 };
 // ALL TIMER ARE SET IN MILLISECOND!!
+
+//player class
 class Player : instance
 {
 public:
-	enum move
+	enum direction
 	{
 		MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT
 	};//It's for input
-	move Move;
+	direction Move;
 
 	enum STATE
 	{
 		STANDBY, IDLE, MOVE, JUMP, DASH, SLAM
 	};//5 states of players, if left standby for 10 seconds, it will triggers idle animation 
 	
-	STATE state;
+	STATE state = STANDBY;
 
 	int32_t state_timer;
+	//Special movement
+	void dash();
+	
+	void jump();
+
+	void slam();
+
+	void end_slam();
+	//Updating
+	void state_update();
 
 	void dash() {
 	if (state != DASH)
@@ -131,6 +139,7 @@ public:
 		case SLAM:
 		{
 			vy = -SLAM_FORCE;
+			if (AIRBONE == false) { end_slam(); }
 		}
 		default:
 			break;
@@ -160,4 +169,6 @@ private:
 
 	uint32_t JUMP_FORCE;
 	uint32_t SLAM_FORCE;
+
+	
 };
