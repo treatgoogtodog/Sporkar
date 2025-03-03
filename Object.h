@@ -5,27 +5,48 @@
 
 using namespace std;
 
+
 enum TYPE
 	{
 		GROUND, WALL, NPC
 
 };
+
+struct HITBOX
+{
+	int x, y, x_size, y_size;
+	HITBOX(int INPUTX, int INPUTY, int INPUT_VSIZE, int INPUT_HSIZE) {};
+};
+
+const instance* check_place(const vector<instance>& instance_list) 
+{
+
+}
+
+bool collision_check(const instance* Tar, int fx, int fy, int fxsize, int fysize)
+{
+	bool check = (fx > Tar->x + Tar->x_size) || (fy > Tar->y + Tar->y_size) || (fx + fxsize < Tar->x) || (fy + fysize < Tar->y);
+	return !check;
+}
+
+
 class instance
 {
 public:
 
 	instance(int INPUTx, int INPUTy, int INPUT_XSIZE, int INPUT_YSIZE, bool SOLID, TYPE OBJ_TYPE) : x(INPUTx), y(INPUTy), x_size(INPUT_XSIZE), y_size(INPUT_YSIZE), is_solid(SOLID), type(OBJ_TYPE) {};
 
-	
+
 
 	int x, y;
 	int x_size, y_size;
 	bool is_solid;
 	TYPE type;
-	
+
 	static vector <instance> instance_list;
 
-	const instance* check_place(const vector<instance> &instance_list)
+
+	const instance* check_place(const vector<instance>& instance_list)
 	{
 		for (const instance& i : instance_list)
 		{
@@ -41,7 +62,6 @@ public:
 		bool check = (this->x > Tar->x + Tar->x_size) || (this->y > Tar->y + Tar->y_size) || (this->x + this->x_size < Tar->x) || (this->y + this->y_size < Tar->y);
 		return !check;
 	}
-
 
 };
 // ALL TIMER ARE SET IN MILLISECOND!!
@@ -95,6 +115,12 @@ public:
 		if ((AIRBONE) && (state != SLAM)) {
 			state = SLAM;
 		}
+	}
+
+	void end_slam() {
+		vy = 0;
+		vx = 0;
+		state = STANDBY;
 	}
 
 	void state_update() 
@@ -152,9 +178,13 @@ public:
 
 	void update_player()
 	{
+ 
+		AIRBONE = (this->check_place(instance_list))->type == GROUND;
+		if (AIRBONE && (vy < 0)) { vy = 0; }
+		if ((this->check_place(instance_list))->type == WALL){}
 		x += vx;
 		y += vy;
-		AIRBONE = (this->check_place(instance_list))->type == GROUND;
+		
 	}
 
 private:
