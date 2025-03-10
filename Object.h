@@ -5,6 +5,8 @@
 
 using namespace std;
 
+
+
 class instance
 {
 public:
@@ -12,24 +14,15 @@ public:
 	{
 		GROUND, WALL, PLAYER, NPC
 	};
-
+	string sprite;
 	int x, y;
 	int x_size, y_size;
 	bool is_solid;
 	TYPE type;
 	
-	vector <instance> instance_list;
+	static vector <instance> INSTANCE_LIST;	
 
-	void instance_update_other(instance &a)
-	{
-		instance* ptr1 = this;
-		instance* ptr2 = &a;
-		if (ptr1 != ptr2) {
-			instance_list.push_back(a);
-		}
-	}
-
-	instance* check_place(const vector<instance> &instance_list)
+	const instance* check_place(const vector<instance> &instance_list)
 	{
 		for (const instance& i : instance_list)
 		{
@@ -145,7 +138,7 @@ public:
 	{
 		x += vx;
 		y += vy;
-		AIRBONE = (this->check_place(instance_list))->type == GROUND;
+		AIRBONE = (this->check_place(INSTANCE_LIST))->type == GROUND;
 	}
 
 private:

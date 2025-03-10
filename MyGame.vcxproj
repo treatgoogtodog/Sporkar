@@ -136,11 +136,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="NumberMath.h" />
     <ClInclude Include="Object.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Sprite\Biker.png" />
+    <Image Include="Sprite\Biker-0%402x-default.png" />
     <Image Include="Sprite\Guns.png" />
     <Image Include="Sprite\Hands.png" />
     <Image Include="Sprite\Shoot_effects.png" />

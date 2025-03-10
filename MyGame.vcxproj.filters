@@ -29,11 +29,11 @@
     <ClInclude Include="NumberMath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Sprite\Biker.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Sprite\Guns.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -41,6 +41,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Sprite\Shoot_effects.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\Biker-0%402x-default.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

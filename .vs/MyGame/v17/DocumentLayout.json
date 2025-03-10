@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\FPT\\source\\repos\\MyGame\\",
+  "WorkspaceRootPath": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\source\\repos\\MyGame\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\source\\repos\\MyGame\\NumberMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\NumberMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:NumberMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\source\\repos\\MyGame\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\source\\repos\\MyGame\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -35,9 +35,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "NumberMath.h",
-              "DocumentMoniker": "C:\\Users\\FPT\\source\\repos\\MyGame\\NumberMath.h",
+              "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\NumberMath.h",
               "RelativeDocumentMoniker": "NumberMath.h",
-              "ToolTip": "C:\\Users\\FPT\\source\\repos\\MyGame\\NumberMath.h",
+              "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\NumberMath.h",
               "RelativeToolTip": "NumberMath.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -47,11 +47,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Object.h",
-              "DocumentMoniker": "C:\\Users\\FPT\\source\\repos\\MyGame\\Object.h",
+              "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Object.h",
               "RelativeDocumentMoniker": "Object.h",
-              "ToolTip": "C:\\Users\\FPT\\source\\repos\\MyGame\\Object.h",
+              "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Object.h",
               "RelativeToolTip": "Object.h",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-02-24T02:02:28.987Z",
               "EditorCaption": ""
@@ -73,9 +73,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Animation.h",
-              "DocumentMoniker": "C:\\Users\\FPT\\source\\repos\\MyGame\\Animation.h",
+              "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Animation.h",
               "RelativeDocumentMoniker": "Animation.h",
-              "ToolTip": "C:\\Users\\FPT\\source\\repos\\MyGame\\Animation.h",
+              "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Animation.h",
               "RelativeToolTip": "Animation.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -85,9 +85,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Source.cpp",
-              "DocumentMoniker": "C:\\Users\\FPT\\source\\repos\\MyGame\\Source.cpp",
+              "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp",
               "RelativeDocumentMoniker": "Source.cpp",
-              "ToolTip": "C:\\Users\\FPT\\source\\repos\\MyGame\\Source.cpp",
+              "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp",
               "RelativeToolTip": "Source.cpp",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
