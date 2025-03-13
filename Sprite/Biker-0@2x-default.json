@@ -1,35 +1,172 @@
 {"frames": [
-	{"IDLE":[
-		{"frame": {"x":5,"y":5,"w":42,"h":70}},
-		{"frame": {"x":61,"y":5,"w":44,"h":70}},
-		{"frame": {"x":117,"y":5,"w":44,"h":70}},
-		{"frame": {"x":173,"y":5,"w":42,"h":70}}
-		]
-	},{"JUMP":[
-		{"frame": {"x":229,"y":5,"w":50,"h":68}},
-		{"frame": {"x":285,"y":5,"w":52,"h":68}},
-		{"frame": {"x":341,"y":5,"w":56,"h":66}},
-		{"frame": {"x":397,"y":5,"w":54,"h":68}}
-		]
-	},{"RUN":[
-		{"frame":{"x":453,"y":5,"w":52,"h":68}},
-		{"frame":{"x":509,"y":5,"w":40,"h":68}},
-		{"frame":{"x":5,"y":79,"w":52,"h":66}},
-		{"frame":{"x":61,"y":79,"w":54,"h":68}},
-		{"frame":{"x":117,"y":79,"w":40,"h":68}},
-		{"frame":{"x":173,"y":79,"w":50,"h":66}}
-	]
-	},{"WALK":[
-		{"frame":{"x":229,"y":79,"w":42,"h":72}},
-		{"frame":{"x":285,"y":79,"w":36,"h":74}},
-		{"frame":{"x":341,"y":79,"w":38,"h":74}},
-		{"frame":{"x":397,"y":79,"w":44,"h":72}},
-		{"frame":{"x":453,"y":79,"w":40,"h":74}},
-		{"frame":{"x":509,"y":79,"w":36,"h":74}}
-	]
-	}],
-			"image": "Biker-0@2x-default.png",
-			"format": "RGBA8888",
-			"size": {"w":570,"h":158}
+
+{
+	"filename": "Biker-IDLE-0.png",
+	"frame": {"x":5,"y":5,"w":42,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":70},
+	"sourceSize": {"w":42,"h":70}
+},
+{
+	"filename": "Biker-IDLE-1.png",
+	"frame": {"x":61,"y":5,"w":44,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":70},
+	"sourceSize": {"w":44,"h":70}
+},
+{
+	"filename": "Biker-IDLE-2.png",
+	"frame": {"x":117,"y":5,"w":44,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":70},
+	"sourceSize": {"w":44,"h":70}
+},
+{
+	"filename": "Biker-IDLE-3.png",
+	"frame": {"x":173,"y":5,"w":42,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":70},
+	"sourceSize": {"w":42,"h":70}
+},
+{
+	"filename": "Biker-Jump-0.png",
+	"frame": {"x":229,"y":5,"w":50,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":68},
+	"sourceSize": {"w":50,"h":68}
+},
+{
+	"filename": "Biker-Jump-1.png",
+	"frame": {"x":285,"y":5,"w":52,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":68},
+	"sourceSize": {"w":52,"h":68}
+},
+{
+	"filename": "Biker-Jump-2.png",
+	"frame": {"x":341,"y":5,"w":56,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":66},
+	"sourceSize": {"w":56,"h":66}
+},
+{
+	"filename": "Biker-Jump-3.png",
+	"frame": {"x":397,"y":5,"w":54,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":54,"h":68},
+	"sourceSize": {"w":54,"h":68}
+},
+{
+	"filename": "Biker-RUN-0.png",
+	"frame": {"x":453,"y":5,"w":52,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":68},
+	"sourceSize": {"w":52,"h":68}
+},
+{
+	"filename": "Biker-RUN-1.png",
+	"frame": {"x":509,"y":5,"w":40,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":68},
+	"sourceSize": {"w":40,"h":68}
+},
+{
+	"filename": "Biker-RUN-2.png",
+	"frame": {"x":5,"y":79,"w":52,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":66},
+	"sourceSize": {"w":52,"h":66}
+},
+{
+	"filename": "Biker-RUN-3.png",
+	"frame": {"x":61,"y":79,"w":54,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":54,"h":68},
+	"sourceSize": {"w":54,"h":68}
+},
+{
+	"filename": "Biker-RUN-4.png",
+	"frame": {"x":117,"y":79,"w":40,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":68},
+	"sourceSize": {"w":40,"h":68}
+},
+{
+	"filename": "Biker-RUN-5.png",
+	"frame": {"x":173,"y":79,"w":50,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":66},
+	"sourceSize": {"w":50,"h":66}
+},
+{
+	"filename": "Biker-WALK-0.png",
+	"frame": {"x":229,"y":79,"w":42,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":72},
+	"sourceSize": {"w":42,"h":72}
+},
+{
+	"filename": "Biker-WALK-1.png",
+	"frame": {"x":285,"y":79,"w":36,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":74},
+	"sourceSize": {"w":36,"h":74}
+},
+{
+	"filename": "Biker-WALK-2.png",
+	"frame": {"x":341,"y":79,"w":38,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":74},
+	"sourceSize": {"w":38,"h":74}
+},
+{
+	"filename": "Biker-WALK-3.png",
+	"frame": {"x":397,"y":79,"w":44,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":72},
+	"sourceSize": {"w":44,"h":72}
+},
+{
+	"filename": "Biker-WALK-4.png",
+	"frame": {"x":453,"y":79,"w":40,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":74},
+	"sourceSize": {"w":40,"h":74}
+},
+{
+	"filename": "Biker-WALK-5.png",
+	"frame": {"x":509,"y":79,"w":36,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":74},
+	"sourceSize": {"w":36,"h":74}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Biker-0@2x-default.png",
+	"format": "RGBA8888",
+	"size": {"w":570,"h":158},
+	"scale": "2",
+	"smartupdate": "$TexturePacker:SmartUpdate:1e9534bf158904d6d19523d5f12d21f2:08fd7c65de030f915a6ba4246904aaca:3036686cb3e4c664078b0b8604741cae$"
 }
-		
+}

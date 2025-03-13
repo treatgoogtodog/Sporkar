@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\NumberMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:NumberMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\SDL_Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:SDL_Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\SDL_Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:SDL_Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\NumberMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:NumberMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\FPT\\AppData\\Local\\Temp\\a3dbbf79-d947-4450-9f0b-082211aba51d_04_key_presses.zip.04_key_presses.zip\\04_key_presses\\04_key_presses.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -29,11 +37,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 193,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "SDL_Manager.cpp",
+              "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\SDL_Manager.cpp",
+              "RelativeDocumentMoniker": "SDL_Manager.cpp",
+              "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\SDL_Manager.cpp",
+              "RelativeToolTip": "SDL_Manager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-13T09:13:34.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SDL_Manager.h",
+              "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\SDL_Manager.h",
+              "RelativeDocumentMoniker": "SDL_Manager.h",
+              "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\SDL_Manager.h",
+              "RelativeToolTip": "SDL_Manager.h",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwAgAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-13T07:02:33.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "NumberMath.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\NumberMath.h",
               "RelativeDocumentMoniker": "NumberMath.h",
@@ -45,20 +79,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Object.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Object.h",
               "RelativeDocumentMoniker": "Object.h",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Object.h",
               "RelativeToolTip": "Object.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-24T02:02:28.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T02:02:28.987Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "04_key_presses.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\AppData\\Local\\Temp\\a3dbbf79-d947-4450-9f0b-082211aba51d_04_key_presses.zip.04_key_presses.zip\\04_key_presses\\04_key_presses.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\a3dbbf79-d947-4450-9f0b-082211aba51d_04_key_presses.zip.04_key_presses.zip\\04_key_presses\\04_key_presses.cpp",
@@ -71,27 +104,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Animation.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Animation.h",
               "RelativeDocumentMoniker": "Animation.h",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Animation.h",
               "RelativeToolTip": "Animation.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-19T15:53:04.988Z"
+              "WhenOpened": "2025-02-19T15:53:04.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Source.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp",
               "RelativeDocumentMoniker": "Source.cpp",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp",
               "RelativeToolTip": "Source.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-19T15:51:39.287Z"
+              "WhenOpened": "2025-02-19T15:51:39.287Z",
+              "EditorCaption": ""
             }
           ]
         }
