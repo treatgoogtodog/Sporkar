@@ -14,9 +14,44 @@ SDL_Manager::SDL_Manager(const std::string& windowTitle, int width, int height) 
 			std::cout << "Window Creation Error:" << SDL_GetError() << std::endl;
 			return;
 		}
-	
+		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+		if (!renderer) {
+			std::cout << "Renderer Creation Error:" << SDL_GetError() << std::endl;
+			return;
+		}
+		if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
+			std::cout << "IMG_Init Err" << SDL_GetError() << std::endl;
+			SDL_DestroyRenderer(renderer);
+			SDL_DestroyWindow(window);
+			SDL_Quit();
+		}
+		keyStates = SDL_GetKeyboardState(nullptr);
+		initialized = true;
 }
 
+SDL_Manager::~SDL_Manager() {
+	IMG_Quit();
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
+	SDL_Quit();
+}
+
+bool SDL_Manager::IsKeyDown(SDL_Scancode key) {
+	const Uint8* keyStates = SDL_GetKeyboardState(nullptr);
+	return keyStates[key];
+}
+
+SDL_Renderer* SDL_Manager::GetRenderer() {
+	return renderer;
+}
+
+SDL_Window* SDL_Manager::GetWindow() {
+	return window;
+}
+
+bool SDL_Manager::IsInitialized() const {
+	return initialized;
+}
 
 void HandleKeyboardEvent(const SDL_Event& event) {
 	switch (event.type) {
@@ -35,7 +70,7 @@ void HandleKeyboardEvent(const SDL_Event& event) {
 	}
 }
 
-static const Uint8* keyStates;
+const Uint8* keyStates;
 
 bool KeycheckPressed(SDL_Scancode key) {
 	keyStates = SDL_GetKeyboardState(nullptr);

@@ -2,10 +2,9 @@
 #include <string>
 #include <vector>
 #include "NumberMath.h"
+#include "Animation.h"
 
 using namespace std;
-
-
 
 class instance
 {
@@ -19,7 +18,9 @@ public:
 	int x_size, y_size;
 	bool is_solid;
 	TYPE type;
-	
+
+
+
 	static vector <instance> INSTANCE_LIST;	
 
 	const instance* check_place(const vector<instance> &instance_list)
@@ -48,13 +49,13 @@ public:
 	enum move
 	{
 		MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT
-	};//It's for input
+	}'';
 	move Move;
 
 	enum STATE
 	{
 		STANDBY, IDLE, MOVE, JUMP, DASH, SLAM
-	};//5 states of players, if left standby for 10 seconds, it will triggers idle animation 
+	}; 
 	
 	STATE state;
 
@@ -151,6 +152,6 @@ private:
 	int MAX_SPEED;
 	int DASH_SPEED;
 
-	uint32_t JUMP_FORCE;
-	uint32_t SLAM_FORCE;
+	int32_t JUMP_FORCE;
+	int32_t SLAM_FORCE;
 };
