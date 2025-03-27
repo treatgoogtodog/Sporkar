@@ -1,2 +1,7 @@
-﻿  SDL_Manager.cpp
+﻿  Animation.cpp
+  CharacterSystem.cpp
+C:\Users\FPT\Documents\GitHub\Sporkar\CharacterSystem.cpp(62,26): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  JsonParser.cpp
+  Source.cpp
+  Generating Code...
   MyGame.vcxproj -> C:\Users\FPT\Documents\GitHub\Sporkar\x64\Debug\MyGame.exe

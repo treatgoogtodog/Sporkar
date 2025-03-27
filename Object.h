@@ -42,116 +42,116 @@ public:
 
 
 };
-// ALL TIMER ARE SET IN MILLISECOND!!
-class Player : instance
-{
-public:
-	enum move
-	{
-		MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT
-	}'';
-	move Move;
-
-	enum STATE
-	{
-		STANDBY, IDLE, MOVE, JUMP, DASH, SLAM
-	}; 
-	
-	STATE state;
-
-	int32_t state_timer;
-
-	void dash() {
-	if (state != DASH)
-		{
-			state = DASH;
-			state_timer = dash_time;
-		}
-	}
-
-	void jump() {
-		if (state != JUMP) 
-		{
-			state = JUMP;
-			state_timer = jump_time;
-		}
-	}
-
-	void slam() {
-		if ((AIRBONE) && (state != SLAM)) {
-			state = SLAM;
-		}
-	}
-
-	void state_update() 
-	{
-		switch (this->state)
-		{
-		case STANDBY:
-			vx -= BASE_ACCELARATION;
-
-		case MOVE:
-		{
-			if (Move == MOVE_RIGHT) {
-				vx += BASE_ACCELARATION;
-				clamp(vx, -MAX_SPEED, MAX_SPEED);
-			}
-			if (Move == MOVE_LEFT) {
-				vx -= BASE_ACCELARATION;
-				clamp(vx, -MAX_SPEED, MAX_SPEED);
-			}
-		}
-
-		case DASH:
-		{
-			state_timer--;
-			if (Move == MOVE_RIGHT) {
-				vx = DASH_SPEED;
-			}
-			else
-			{
-				if (Move == MOVE_LEFT) {
-					vx = -DASH_SPEED;
-				}
-			}
-		}
-
-		case JUMP:
-		{
-			state_timer--;
-			vy += JUMP_FORCE;
-		}
-
-		case SLAM:
-		{
-			vy = -SLAM_FORCE;
-		}
-		default:
-			break;
-		}
-		if (state_timer == 0) 
-		{
-			state = IDLE;
-		}
-	}
-
-	void update_player()
-	{
-		x += vx;
-		y += vy;
-		AIRBONE = (this->check_place(INSTANCE_LIST))->type == GROUND;
-	}
-
-private:
-	bool AIRBONE;
-	int vx, vy;// velocity on x - y axis
-	uint32_t jump_time = 750;
-	uint32_t dash_time = 500;
-
-	int BASE_ACCELARATION;//if negative, it's deaccelaration
-	int MAX_SPEED;
-	int DASH_SPEED;
-
-	int32_t JUMP_FORCE;
-	int32_t SLAM_FORCE;
-};
+//// ALL TIMER ARE SET IN MILLISECOND!!
+//class Player : instance
+//{
+//public:
+//	enum move
+//	{
+//		MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT
+//	};
+//	move Move;
+//
+//	enum STATE
+//	{
+//		STANDBY, IDLE, MOVE, JUMP, DASH, SLAM
+//	}; 
+//	
+//	STATE state;
+//
+//	int32_t state_timer;
+//
+//	void dash() {
+//	if (state != DASH)
+//		{
+//			state = DASH;
+//			state_timer = dash_time;
+//		}
+//	}
+//
+//	void jump() {
+//		if (state != JUMP) 
+//		{
+//			state = JUMP;
+//			state_timer = jump_time;
+//		}
+//	}
+//
+//	void slam() {
+//		if ((AIRBONE) && (state != SLAM)) {
+//			state = SLAM;
+//		}
+//	}
+//
+//	void state_update() 
+//	{
+//		switch (this->state)
+//		{
+//		case STANDBY:
+//			vx -= BASE_ACCELARATION;
+//
+//		case MOVE:
+//		{
+//			if (Move == MOVE_RIGHT) {
+//				vx += BASE_ACCELARATION;
+//				clamp(vx, -MAX_SPEED, MAX_SPEED);
+//			}
+//			if (Move == MOVE_LEFT) {
+//				vx -= BASE_ACCELARATION;
+//				clamp(vx, -MAX_SPEED, MAX_SPEED);
+//			}
+//		}
+//
+//		case DASH:
+//		{
+//			state_timer--;
+//			if (Move == MOVE_RIGHT) {
+//				vx = DASH_SPEED;
+//			}
+//			else
+//			{
+//				if (Move == MOVE_LEFT) {
+//					vx = -DASH_SPEED;
+//				}
+//			}
+//		}
+//
+//		case JUMP:
+//		{
+//			state_timer--;
+//			vy += JUMP_FORCE;
+//		}
+//
+//		case SLAM:
+//		{
+//			vy = -SLAM_FORCE;
+//		}
+//		default:
+//			break;
+//		}
+//		if (state_timer == 0) 
+//		{
+//			state = IDLE;
+//		}
+//	}
+//
+//	void update_player()
+//	{
+//		x += vx;
+//		y += vy;
+//		AIRBONE = (this->check_place(INSTANCE_LIST))->type == GROUND;
+//	}
+//
+//private:
+//	bool AIRBONE;
+//	int vx, vy;// velocity on x - y axis
+//	uint32_t jump_time = 750;
+//	uint32_t dash_time = 500;
+//
+//	int BASE_ACCELARATION;//if negative, it's deaccelaration
+//	int MAX_SPEED;
+//	int DASH_SPEED;
+//
+//	int32_t JUMP_FORCE;
+//	int32_t SLAM_FORCE;
+//};

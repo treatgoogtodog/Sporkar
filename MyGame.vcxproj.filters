@@ -21,6 +21,15 @@
     <ClCompile Include="SDL_Manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CharacterSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonParser.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -38,18 +47,24 @@
     <ClInclude Include="SDL_Manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CharacterSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonParsers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Sprite\Guns.png">
+    <None Include="Save\PlayerData.json">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Sprite\Hands.png">
+    </None>
+    <None Include="Texture\PlayerTexture.json">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Sprite\Shoot_effects.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Sprite\Biker-0%402x-default.png">
+    </None>
+    <None Include="Sprite\BlackinMan.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Sprite\BlackinMan.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
