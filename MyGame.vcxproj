@@ -133,20 +133,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="CharacterSystem.cpp" />
-    <ClCompile Include="JsonParser.cpp" />
-    <ClCompile Include="SDL_Manager.cpp" />
+    <ClCompile Include="Headers\Animation.cpp" />
+    <ClCompile Include="Headers\CharacterSystem.cpp" />
+    <ClCompile Include="Headers\JsonParser.cpp" />
+    <ClCompile Include="Headers\MappingSystem.cpp" />
+    <ClCompile Include="Headers\Object.cpp" />
+    <ClCompile Include="Headers\SDL_Manager.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animation.h" />
-    <ClInclude Include="CharacterSystem.h" />
-    <ClInclude Include="JsonParsers.h" />
-    <ClInclude Include="SDL_Manager.h" />
-    <ClInclude Include="json.hpp" />
-    <ClInclude Include="NumberMath.h" />
-    <ClInclude Include="Object.h" />
+    <ClInclude Include="Headers\Animation.h" />
+    <ClInclude Include="Headers\CharacterSystem.h" />
+    <ClInclude Include="Headers\JsonParsers.h" />
+    <ClInclude Include="Headers\LogicAndMechanic.h" />
+    <ClInclude Include="Headers\MappingSystem.h" />
+    <ClInclude Include="Headers\SDL_Manager.h" />
+    <ClInclude Include="Headers\json.hpp" />
+    <ClInclude Include="Headers\NumberMath.h" />
+    <ClInclude Include="Headers\Object.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Save\PlayerData.json" />
@@ -155,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Sprite\BlackinMan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Mappdata.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

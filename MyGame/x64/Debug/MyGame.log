@@ -1,7 +1,6 @@
-﻿  Animation.cpp
-  CharacterSystem.cpp
-C:\Users\FPT\Documents\GitHub\Sporkar\CharacterSystem.cpp(62,26): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+﻿  CharacterSystem.cpp
   JsonParser.cpp
   Source.cpp
+C:\Users\FPT\Documents\GitHub\Sporkar\Source.cpp(17,18): warning C4101: 'texture': unreferenced local variable
   Generating Code...
-  MyGame.vcxproj -> C:\Users\FPT\Documents\GitHub\Sporkar\x64\Debug\MyGame.exe
+C:\Users\FPT\Documents\GitHub\Sporkar\CharacterSystem.cpp(139,1): error C4700: uninitialized local variable 'tVX' used

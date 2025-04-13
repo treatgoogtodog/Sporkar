@@ -18,39 +18,51 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDL_Manager.cpp">
+    <ClCompile Include="Headers\SDL_Manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CharacterSystem.cpp">
+    <ClCompile Include="Headers\CharacterSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Animation.cpp">
+    <ClCompile Include="Headers\Animation.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="JsonParser.cpp">
+    <ClCompile Include="Headers\JsonParser.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Headers\MappingSystem.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Headers\Object.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animation.h">
+    <ClInclude Include="Headers\Animation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Object.h">
+    <ClInclude Include="Headers\Object.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NumberMath.h">
+    <ClInclude Include="Headers\NumberMath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="json.hpp">
+    <ClInclude Include="Headers\json.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDL_Manager.h">
+    <ClInclude Include="Headers\SDL_Manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CharacterSystem.h">
+    <ClInclude Include="Headers\CharacterSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="JsonParsers.h">
+    <ClInclude Include="Headers\JsonParsers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\MappingSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\LogicAndMechanic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -67,5 +79,10 @@
     <Image Include="Sprite\BlackinMan.png">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Mappdata.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

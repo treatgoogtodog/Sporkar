@@ -1,6 +1,8 @@
-﻿#include "SDL_Manager.h"
-#include "Animation.h"
-#include "JsonParsers.h"
+﻿#include "Headers/SDL_Manager.h"
+#include "Headers/Animation.h"
+#include "Headers/JsonParsers.h"
+#include "Headers/Object.h"
+#include "Headers/CharacterSystem.h"
 #include <iostream>
 #include <string>
 #include <map>
@@ -13,31 +15,28 @@ int main(int argc, char* argv[]) {
         return 0;
     }
     SDL_Texture* texture;
-    std::map <std::string, Animation> anim = SheetReader("Texture/PlayerTexture.json", "Sprite/BlackinMan.png", sdlManager.GetRenderer(), texture);
     SDL_Event event;
     bool running = true;
     uint32_t previousTime = SDL_GetTicks();
-
+    player PLAYER;
+    
     while (running) {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 running = false;
             }
         }
+        PLAYER.SetPosition(400, 300);
         uint32_t currentTime = SDL_GetTicks();
         int deltaTime = currentTime - previousTime;
-        UpdateAnimation(anim["Idle"], deltaTime);
-        DrawAnimation(sdlManager.GetRenderer(), anim["Idle"], 400, 300);
         
-        if (sdlManager.IsKeyDown(SDL_SCANCODE_W)) {
-            std::cout << "Key 'W' is being held down!" << std::endl;
+        SDL_Delay(16 - deltaTime);
+        if (deltaTime > 16) {
+            std::cout << "Warning: Unoptimal framerate. Suspecting." << std::endl;
         }
-
-        if (sdlManager.IsKeyDown(SDL_SCANCODE_ESCAPE)) {
-            std::cout << "Escape key pressed. Exiting!" << std::endl;
-            running = false;
-        }
-        SDL_Delay(16);
+        SDL_Rect line = { 100, 100, 600, 32 };
+        SDL_SetRenderDrawColor(sdlManager.GetRenderer(), 255, 0, 0, 255);
+        SDL_RenderFillRect(sdlManager.GetRenderer(), &line);
         //SDL_SetRenderDrawColor(sdlManager.GetRenderer(), 0, 0, 0, 255);
         //SDL_RenderClear(sdlManager.GetRenderer());
         //SDL_RenderPresent(sdlManager.GetRenderer());
