@@ -14,15 +14,9 @@ public:
     SDL_Window* GetWindow();
     bool IsInitialized() const;
 
-    // Extenstion
+    
     
     void SetBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
-    bool IsKeyPressed(SDL_Scancode key);
-    SDL_Point GetMousePosition();
-    bool IsMouseButtonPressed(Uint32 button);
-    SDL_Texture* RenderText(const std::string& text, const std::string& fontPath, int fontSize, SDL_Color color);
-    void SetLogicalSize(int width, int height);
-    void CleanupTextures();
     bool IsKeyDown(SDL_Scancode key);
 
 private:

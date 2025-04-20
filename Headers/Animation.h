@@ -27,6 +27,22 @@ SDL_Texture* LoadTexture(SDL_Renderer* renderer, const std::string& path);
 
 void UpdateAnimation(Animation& anim, int deltaTime);
 
-void DrawAnimation(SDL_Renderer* renderer, Animation& anim, int x, int y);
+void DrawAnimation(SDL_Renderer* renderer, Animation& anim, int x, int y, float multipler);
 
-void DrawAnimFrame(SDL_Renderer* renderer, Animation& anim, int x, int y, int frameID);
+void DrawAnimFrame(SDL_Renderer* renderer, Animation& anim, int x, int y, int frameID, float multipler);
+
+void DrawTexture(SDL_Renderer* renderer, SDL_Texture* Texture, int x, int y, int wid, int hei);
+
+struct Layer {
+    SDL_Texture* texture;
+    float speed;       
+    float xOffset;     
+
+    Layer(std::string path, float speed, float xOffset, SDL_Renderer* renderer) {
+        this->speed = speed;
+        this->xOffset = xOffset;
+        this->texture = LoadTexture(renderer, path);
+    }
+};
+
+void RenderParallaxBackground(SDL_Renderer* renderer, std::vector<Layer>& layers, int screenWidth, int screenHeight);

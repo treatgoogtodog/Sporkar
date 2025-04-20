@@ -2,7 +2,7 @@
 
 using namespace std;
 
-player::player(int x, int y, const std::string& texturePTH, const std::string& textureDAT, SDL_Renderer* renderer) {
+Player::Player(int x, int y, const std::string& texturePTH, const std::string& textureDAT, SDL_Renderer* renderer, const float& multipler) {
 	this->x = x;
 	this->y = y;
 	this->texturedata = SheetReader(textureDAT, texturePTH, renderer, texture);
@@ -10,15 +10,19 @@ player::player(int x, int y, const std::string& texturePTH, const std::string& t
 	this->height = texturedata["Idle"].frames[0].height;
 	this->VelY = 0;
 	this->curr_anim = "Idle";
+	this->health = 100;
+	this->multipler = multipler;
+	SDL_SetTextureAlphaMod(texture, 255);
+	SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
 }
 
-player::~player() {
+Player::~Player() {
 	if (texture) {
 		SDL_DestroyTexture(texture);
 	}
 }
 
-void player::update(bool isJumping, float gravity, float JumpStreg, int groundLvl) {
+void Player::update(bool isJumping, float gravity, float JumpStreg, int groundLvl) {
 	if (isJumping && y == groundLvl) {
 		VelY = -JumpStreg;
 	}
@@ -30,20 +34,27 @@ void player::update(bool isJumping, float gravity, float JumpStreg, int groundLv
 		y = groundLvl;
 		VelY = 0;
 	}
-}
-
-void player::render(SDL_Renderer* renderer, const int& deltaTime) {
-	UpdateAnimation(this->texturedata[curr_anim], deltaTime);
-	if(IDs == -1){
-		DrawAnimation(renderer, this->texturedata[curr_anim], this->x, this->y);
+	if (this->y < groundLvl) {
+		curr_anim = "Jump";
+		UpdateIDs(isJumping);
 	}
 	else {
-		DrawAnimFrame(renderer, this->texturedata[curr_anim], this->x, this->y, IDs);
+		curr_anim = "Run";
+		}
+}
+
+void Player::render(SDL_Renderer* renderer, const int& deltaTime, const float& multipler) {
+	UpdateAnimation(this->texturedata[curr_anim], deltaTime);
+	if(IDs == -1){
+		DrawAnimation(renderer, this->texturedata[curr_anim], this->x, this->y, multipler);
+	}
+	else {
+		DrawAnimFrame(renderer, this->texturedata[curr_anim], this->x, this->y, IDs, multipler);
 	}
 	
 }
 
-void player::UpdateIDs(bool isJumping){
+void Player::UpdateIDs(bool isJumping){
 	if (!isJumping) { this->IDs = -1; return; }
 	if (VelY >= 0.5) { this->IDs = 0; return; }
 	if ((VelY < 0.5) && (VelY > -0.5)) { this->IDs = 1; return; }

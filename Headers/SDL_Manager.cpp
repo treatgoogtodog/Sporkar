@@ -52,3 +52,10 @@ SDL_Window* SDL_Manager::GetWindow() {
 bool SDL_Manager::IsInitialized() const {
 	return initialized;
 }
+
+void SDL_Manager::SetBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
+	if (renderer) {
+		SDL_SetRenderDrawColor(renderer, r, g, b, a);
+		SDL_RenderClear(renderer);
+	}
+}

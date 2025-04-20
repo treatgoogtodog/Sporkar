@@ -136,7 +136,8 @@
     <ClCompile Include="Headers\Animation.cpp" />
     <ClCompile Include="Headers\CharacterSystem.cpp" />
     <ClCompile Include="Headers\JsonParser.cpp" />
-    <ClCompile Include="Headers\MappingSystem.cpp" />
+    <ClCompile Include="Headers\LogicAndMechanic.cpp" />
+    <ClCompile Include="Headers\MiscLoader.cpp" />
     <ClCompile Include="Headers\Object.cpp" />
     <ClCompile Include="Headers\SDL_Manager.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -146,7 +147,7 @@
     <ClInclude Include="Headers\CharacterSystem.h" />
     <ClInclude Include="Headers\JsonParsers.h" />
     <ClInclude Include="Headers\LogicAndMechanic.h" />
-    <ClInclude Include="Headers\MappingSystem.h" />
+    <ClInclude Include="Headers\MiscLoader.h" />
     <ClInclude Include="Headers\SDL_Manager.h" />
     <ClInclude Include="Headers\json.hpp" />
     <ClInclude Include="Headers\NumberMath.h" />

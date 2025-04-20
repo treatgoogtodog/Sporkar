@@ -6,6 +6,7 @@
 #include <vector>
 #include "Animation.h"
 
+using namespace std;
 
 SDL_Texture* LoadTexture(SDL_Renderer* renderer, const std::string& path) {
     SDL_Surface* surface = IMG_Load(path.c_str());
@@ -23,18 +24,39 @@ void UpdateAnimation(Animation& anim, int deltaTime) {
     }
 }
 
-void DrawAnimation(SDL_Renderer* renderer, Animation& anim, int x, int y) {
+void DrawAnimation(SDL_Renderer* renderer, Animation& anim, int x, int y, float multipler) {
     Frame frame = anim.frames[anim.currentFrame];
     SDL_Rect srcRect = { frame.x, frame.y, frame.width, frame.height };
-    SDL_Rect destRect = { x, y, frame.width, frame.height };
+    SDL_Rect destRect = { x, y, static_cast<int>(frame.width * multipler), static_cast<int>(frame.height * multipler) };
     SDL_RenderPresent(renderer);
     SDL_RenderCopy(renderer, anim.texture, &srcRect, &destRect);
 }
 
-void DrawAnimFrame(SDL_Renderer* renderer, Animation& anim, int x, int y, int frameID) {
+void DrawAnimFrame(SDL_Renderer* renderer, Animation& anim, int x, int y, int frameID, float multipler) {
     Frame frame = anim.frames[frameID];
     SDL_Rect srcRect = { frame.x, frame.y, frame.width, frame.height };
-    SDL_Rect destRect = { x, y, frame.width, frame.height };
+    SDL_Rect destRect = { x, y, static_cast<int>(frame.width*multipler), static_cast<int>(frame.height*multipler) };
     SDL_RenderPresent(renderer);
     SDL_RenderCopy(renderer, anim.texture, &srcRect, &destRect);
+}
+
+void DrawTexture(SDL_Renderer* renderer, SDL_Texture* texture, int x, int y, int wid, int hei) {
+    SDL_RenderPresent(renderer);
+    SDL_Rect destRect = { x,y, wid, hei};
+    SDL_RenderCopy(renderer, texture, NULL,&destRect );
+}
+void RenderParallaxBackground(SDL_Renderer* renderer, std::vector<Layer>& layers, int screenWidth, int screenHeight) {
+    for (auto& layer : layers) {
+        layer.xOffset -= layer.speed;
+        if (layer.xOffset <= -screenWidth) {
+            layer.xOffset = 0;
+        }
+
+        SDL_Rect srcRect = { 0, 0, screenWidth, screenHeight };
+        SDL_Rect destRect1 = { static_cast<int>(layer.xOffset), 0, screenWidth, screenHeight };
+        SDL_Rect destRect2 = { static_cast<int>(layer.xOffset) + screenWidth, 0, screenWidth, screenHeight };
+
+        SDL_RenderCopy(renderer, layer.texture, &srcRect, &destRect1);
+        SDL_RenderCopy(renderer, layer.texture, &srcRect, &destRect2);
+    }
 }

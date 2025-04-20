@@ -36,32 +36,3 @@ std::map<std::string, Animation> SheetReader(const std::string& jsonpath, const 
     return animation;
 }
 
-
-std::map<int, mapSQ> MapReader(const std::string& path) {
-    std::ifstream file(path);
-    if (!file.is_open()) {
-        std::cout << "Error reading map at " << path << std::endl;
-        return;
-    }
-    std::map <int, mapSQ> MapData;
-    int amount;
-    file >> amount;
-    for (int i = 0; i < amount; i++)
-    {
-        mapSQ temp;
-        int name;
-        file >> name;
-        file >> temp.sizeW >> temp.sizeH;
-        for (int j = 0; j < temp.sizeH; j++)
-        {
-            for (int k = 0; k < temp.sizeW; k++)
-            {
-                int solid;
-                file >> solid;
-                temp.MAP[j].push_back(static_cast<bool>(solid));
-            }
-        }
-        MapData[name] = temp;
-    }
-    return MapData;
-}

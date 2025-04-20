@@ -30,11 +30,14 @@
     <ClCompile Include="Headers\JsonParser.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="Headers\MappingSystem.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="Headers\Object.cpp">
       <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Headers\LogicAndMechanic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Headers\MiscLoader.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,7 +62,7 @@
     <ClInclude Include="Headers\JsonParsers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\MappingSystem.h">
+    <ClInclude Include="Headers\MiscLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\LogicAndMechanic.h">

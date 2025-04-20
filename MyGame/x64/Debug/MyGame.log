@@ -1,6 +1,6 @@
 ﻿  CharacterSystem.cpp
-  JsonParser.cpp
+  LogicAndMechanic.cpp
+  Object.cpp
   Source.cpp
-C:\Users\FPT\Documents\GitHub\Sporkar\Source.cpp(17,18): warning C4101: 'texture': unreferenced local variable
   Generating Code...
-C:\Users\FPT\Documents\GitHub\Sporkar\CharacterSystem.cpp(139,1): error C4700: uninitialized local variable 'tVX' used
+  MyGame.vcxproj -> C:\Users\FPT\Documents\GitHub\Sporkar\x64\Debug\MyGame.exe

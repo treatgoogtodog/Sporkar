@@ -1,25 +1,30 @@
+// Headers/Object.h
 #pragma once
 
 #include <SDL.h>
 #include <SDL_image.h>
 #include <deque>
 #include <string>
+#include "MiscLoader.h"
+#include "CharacterSystem.h"
 
 class BaseObject {
 public:
     BaseObject(const std::string& texturePath, int x, int y, int width, int height, SDL_Renderer* renderer);
     ~BaseObject();
-    bool checkCollision(int playerX, int playerY, int playerWidth, int playerHeight) const;
 
     void render(SDL_Renderer* renderer) const;
+    void move(int speed);
 
     int getX() const { return x; }
     int getY() const { return y; }
     int getWidth() const { return width; }
     int getHeight() const { return height; }
 
+    bool reg;
+
 private:
-    int x, y, width, height; 
+    int x, y, width, height;
     SDL_Texture* texture;    
 };
 
@@ -29,9 +34,13 @@ public:
 
     void removeOldObjects(int playerX);
 
-    void updatePath(int playerX, int playerWidth, SDL_Renderer* renderer);
-
     void renderPath(SDL_Renderer* renderer) const;
+
+    void renderGround(SDL_Renderer* renderer, SDL_Texture* texture, int offset) const;
+
+    void UPDATE(SDL_Renderer* renderer, int speed);
+
+    BaseObject* checkCollision(Player& player) const;
 
     void cleanUp();
 

@@ -4,41 +4,30 @@
 #include <string>
 #include "JsonParsers.h"
 #include "Animation.h"
-#include "Object.h"
 #include <map>
 
-enum PLAYERSTATE {
-	IDLE,
-	RUNNING,
-	JUMPING,
-	FALLING,
-	DASHING,
-	LANDING
-};
-
-class player {
+class Player {
 public:
-	player(int x, int y, const std::string& texturePTH, const std::string& textureDAT, SDL_Renderer* renderer);
-	~player();
+    Player(int x, int y, const std::string& texturePTH, const std::string& textureDAT, SDL_Renderer* renderer, const float& multipler);
+    ~Player();
 
-	void update(bool isJumping, float gravity, float JumpStreg, int groundLvl);
+    void update(bool isJumping, float gravity, float JumpStreg, int groundLvl);
 
-	void render(SDL_Renderer* renderer, const int& deltaTime);
+    void render(SDL_Renderer* renderer, const int& deltaTime, const float& multipler);
 
-	BaseObject* checkCollision(int x, int y);
-
-	void UpdateIDs(bool isJumping);
-
-	int getX() const { return x; }
-	int getY() const { return y; }
-	int getWid() const { return width; }
-	int getHei() const { return height; }
+    void UpdateIDs(bool isJumping);
+    int health;
+    int getX() const { return x; }
+    int getY() const { return y; }
+    int getWid() const { return width; }
+    int getHei() const { return height; }
 private:
-	int x, y;
-	int width, height;
-	float VelY;
-	int IDs = -1;
-	std::string curr_anim = "Idle";
-	SDL_Texture* texture;
-	std::map<std::string, Animation> texturedata;
+    int x, y;
+    float multipler;
+    int width, height;
+    float VelY;
+    int IDs = -1;
+    std::string curr_anim = "Idle";
+    SDL_Texture* texture;
+    std::map<std::string, Animation> texturedata;
 };
