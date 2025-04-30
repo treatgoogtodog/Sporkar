@@ -35,7 +35,9 @@ void BaseObject::move(int speed) {
 }
 
 void PathManager::addNewObject(int x, int y, int width, int height, const std::string& texturePath, SDL_Renderer* renderer) {
-    pathObjects.push_front(new BaseObject(texturePath, x, y, width, height, renderer));
+    BaseObject* toCreate = new BaseObject(texturePath, x, y, width, height, renderer);
+    if (!toCreate->getTexture()) { SDL_Log("Invalid texture! Aborting Creation"); return; }
+    pathObjects.push_front(toCreate);
 }
 
 void PathManager::removeOldObjects(int playerX) {
@@ -91,4 +93,27 @@ void PathManager::cleanUp() {
         delete obj;
     }
     pathObjects.clear();
+}
+
+dog::dog(int x, int y, int width, int height, const std::string& texturePTH, SDL_Renderer* renderer, float multipler) 
+       : x(x), y(y), width(width), height(height), texture(nullptr) { 
+       SDL_Surface* surface = IMG_Load(texturePTH.c_str());
+       if (!surface) {
+           SDL_Log("Failed to load texture: %s", IMG_GetError());
+           return;
+       }
+       this->texturedata = SheetReader(DOGDOGSHEETDATA, DOGDOGSPITEPATH, renderer, this->texture);
+       SDL_FreeSurface(surface);
+}
+
+dog::~dog() {
+	if (texture) {
+		SDL_DestroyTexture(texture);
+	}
+}
+
+void dog::render(SDL_Renderer* renderer, const int& deltaTime, const float& multipler) {
+    UpdateAnimation(this->texturedata["Drive"], deltaTime);
+    float multi = this->getWidth() / this->texturedata["Drive"].frames.at(texturedata["Drive"].currentFrame).width;
+	DrawAnimation(renderer, this->texturedata["Drive"], this->x, this->y, multi);
 }

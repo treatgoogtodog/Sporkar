@@ -27,18 +27,20 @@ SDL_Manager::SDL_Manager(const std::string& windowTitle, int width, int height) 
 		}
 		keyStates = SDL_GetKeyboardState(nullptr);
 		initialized = true;
+		
+		this->Width = width;
+		this->Height = height;
 }
 
 SDL_Manager::~SDL_Manager() {
-	IMG_Quit();
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-	SDL_Quit();
-}
 
-bool SDL_Manager::IsKeyDown(SDL_Scancode key) {
-	const Uint8* keyStates = SDL_GetKeyboardState(nullptr);
-	return keyStates[key];
+	if (renderer) {
+		SDL_DestroyRenderer(renderer);
+	}
+	if (window) {
+		SDL_DestroyWindow(window);
+	}
+	SDL_Quit();
 }
 
 SDL_Renderer* SDL_Manager::GetRenderer() {
@@ -59,3 +61,17 @@ void SDL_Manager::SetBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
 		SDL_RenderClear(renderer);
 	}
 }
+
+int SDL_Manager::GetWidth() const {
+    return Width;
+}
+
+int SDL_Manager::GetHeight() const {
+    return Height;
+}
+
+bool SDL_Manager::IsKeyDown(SDL_Scancode key) {
+    keyStates = SDL_GetKeyboardState(nullptr);
+    return keyStates[key];
+}
+

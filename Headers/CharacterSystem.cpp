@@ -6,8 +6,8 @@ Player::Player(int x, int y, const std::string& texturePTH, const std::string& t
 	this->x = x;
 	this->y = y;
 	this->texturedata = SheetReader(textureDAT, texturePTH, renderer, texture);
-	this->width = texturedata["Idle"].frames[0].width;
-	this->height = texturedata["Idle"].frames[0].height;
+	this->width = texturedata["Run"].frames[0].width;
+	this->height = texturedata["Run"].frames[0].height;
 	this->VelY = 0;
 	this->curr_anim = "Idle";
 	this->health = 100;
@@ -22,9 +22,11 @@ Player::~Player() {
 	}
 }
 
-void Player::update(bool isJumping, float gravity, float JumpStreg, int groundLvl) {
+bool Player::update(bool isJumping, float gravity, float JumpStreg, int groundLvl) {
+	bool jump = false;
 	if (isJumping && y == groundLvl) {
 		VelY = -JumpStreg;
+		jump = true;
 	}
 
 	VelY += gravity; 
@@ -41,6 +43,7 @@ void Player::update(bool isJumping, float gravity, float JumpStreg, int groundLv
 	else {
 		curr_anim = "Run";
 		}
+	return jump;
 }
 
 void Player::render(SDL_Renderer* renderer, const int& deltaTime, const float& multipler) {

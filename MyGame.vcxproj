@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\Dependences\SDL2_image-devel-2.8.5-VC\SDL2_image-2.8.5\include;D:\Dependences\SDL2-2.32.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Dependences\SDL2_image-devel-2.8.5-VC\SDL2_image-2.8.5\lib\x64;D:\Dependences\SDL2-2.32.0\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Dependences\SDL2_mixer-2.8.1\include;D:\Dependences\SDL2_image-devel-2.8.5-VC\SDL2_image-2.8.5\include;D:\Dependences\SDL2-2.32.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Dependences\SDL2_mixer-2.8.1\lib\x64;D:\Dependences\SDL2_image-devel-2.8.5-VC\SDL2_image-2.8.5\lib\x64;D:\Dependences\SDL2-2.32.0\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -113,7 +113,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,6 +140,7 @@
     <ClCompile Include="Headers\MiscLoader.cpp" />
     <ClCompile Include="Headers\Object.cpp" />
     <ClCompile Include="Headers\SDL_Manager.cpp" />
+    <ClCompile Include="Headers\SoundAndMusic.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -152,17 +153,29 @@
     <ClInclude Include="Headers\json.hpp" />
     <ClInclude Include="Headers\NumberMath.h" />
     <ClInclude Include="Headers\Object.h" />
+    <ClInclude Include="Headers\SoundAndMusic.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Save\PlayerData.json" />
-    <None Include="Sprite\BlackinMan.json" />
+    <None Include="Sprite\PlayerSpr\BlackinMan.json" />
     <None Include="Texture\PlayerTexture.json" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Sprite\BlackinMan.png" />
+    <Image Include="Sprite\Bullets01.png" />
+    <Image Include="Sprite\Levietha.png" />
+    <Image Include="Sprite\PlayerSpr\BlackinMan.png" />
+    <Image Include="Sprite\TralaleloTralala.png" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Mappdata.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="SFX\HURT1.wav" />
+    <Media Include="SFX\HURT2.wav" />
+    <Media Include="SFX\HURT3.wav" />
+    <Media Include="SFX\HURT4.wav" />
+    <Media Include="SFX\JUMP1.wav" />
+    <Media Include="SFX\JUMP2.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

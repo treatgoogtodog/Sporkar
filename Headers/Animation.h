@@ -45,4 +45,4 @@ struct Layer {
     }
 };
 
-void RenderParallaxBackground(SDL_Renderer* renderer, std::vector<Layer>& layers, int screenWidth, int screenHeight);
+void RenderParallaxBackground(SDL_Renderer* renderer, std::vector<Layer>& layers, int screenWidth, int screenHeight, int deltaTime, float speed);

@@ -1,25 +1,37 @@
-#pragma once
-#include <string>
-#include <vector>
-#include "Animation.h"
+#pragma once  
+#include <string>  
+#include <vector>  
+#include <utility> 
+#include "Animation.h"  
+#include <SDL_mixer.h>  
 
-// ALL PATHS ARE RELATED TO SOURCE
+// ALL PATHS ARE RELATED TO SOURCE  
 
-#define PLAYERSPRITEPATH "Sprite\\BlackinMan.png"
-#define PLAYERSPRITESHEETDATA "Texture\\PlayerTexture.json"
-#define GROUNDSPRITEPATH "Sprite\\Road.png"
+#define PLAYERSPRITEPATH "Sprite\\PlayerSpr\\BlackinMan.png"  
+#define PLAYERSPRITESHEETDATA "Sprite\\PlayerSpr\\BlackinMan.json"  
+#define GROUNDSPRITEPATH "Sprite\\Road.png"  
+#define DOGDOGSPITEPATH "Sprite\\Dogdog.png"  
+#define DOGDOGSHEETDATA "Sprite\\Dogdog.json"  
 
-struct obstacledata {
-    std::string spritepath;
-    std::pair<int, int> size; // width, height
-};
+enum ObsType {  
+   AIR,  
+   GROUND  
+};  
 
-extern std::vector<obstacledata> obstacle;
+struct obstacledata {  
+   std::string spritepath;  
+   std::pair<int, int> size;  
+   ObsType type; // width, height  
+};  
 
-struct LayerData {
-    std::string spritepath;
-    float speed;
-    float offset;
-};
+struct layer {  
+   std::string spritepath;  
+   float speed;  
+   int offset;  
+};  
 
-extern std::vector<LayerData> Layers;
+extern std::vector<obstacledata> obstacle;  
+
+extern std::vector<layer> Layers;  
+
+extern std::vector<std::pair<std::string, std::string>> soundfx; // Fixed std::pair usage

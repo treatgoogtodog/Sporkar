@@ -2,7 +2,7 @@
   "meta": {
     "version": "0.6.7"
   },
-  "savePath": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Sprite",
+  "savePath": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Sprite\\PlayerSpr",
   "images": [],
   "folders": [
     "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/Biker"
@@ -19,7 +19,7 @@
     "filter": "none",
     "exporter": "JSON (hash)",
     "fileName": "pack-result",
-    "savePath": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Sprite",
+    "savePath": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Sprite\\PlayerSpr",
     "width": 2048,
     "height": 2048,
     "fixedSize": false,
@@ -29,7 +29,7 @@
     "allowRotation": false,
     "allowTrim": false,
     "trimMode": "trim",
-    "alphaThreshold": "0",
+    "alphaThreshold": "6",
     "detectIdentical": false,
     "packer": "MaxRectsBin",
     "packerMethod": "BestLongSideFit"

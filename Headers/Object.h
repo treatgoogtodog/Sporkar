@@ -7,6 +7,7 @@
 #include <string>
 #include "MiscLoader.h"
 #include "CharacterSystem.h"
+#include "JsonParsers.h"
 
 class BaseObject {
 public:
@@ -20,7 +21,7 @@ public:
     int getY() const { return y; }
     int getWidth() const { return width; }
     int getHeight() const { return height; }
-
+    SDL_Texture* getTexture() const { return texture; };
     bool reg;
 
 private:
@@ -46,4 +47,20 @@ public:
 
 private:
     std::deque<BaseObject*> pathObjects; 
+};
+
+class dog {
+private:
+    int x, y, width, height;
+    SDL_Texture* texture;
+	std::map<std::string, Animation> texturedata;
+public:
+    dog(int x, int y,int width,int height, const std::string& texturePTH, SDL_Renderer* renderer, float multipler);
+    ~dog();
+    void render(SDL_Renderer* renderer, const int& deltaTime, const float& multipler);
+    int getX() const { return x; }
+    int getY() const { return y; }
+    int getWidth() const { return width; }
+    int getHeight() const { return height; };
+    
 };

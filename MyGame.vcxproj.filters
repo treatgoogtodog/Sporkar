@@ -39,6 +39,9 @@
     <ClCompile Include="Headers\MiscLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Headers\SoundAndMusic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Animation.h">
@@ -68,6 +71,9 @@
     <ClInclude Include="Headers\LogicAndMechanic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\SoundAndMusic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Save\PlayerData.json">
@@ -76,10 +82,19 @@
     <None Include="Texture\PlayerTexture.json">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="Sprite\BlackinMan.json" />
+    <None Include="Sprite\PlayerSpr\BlackinMan.json" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Sprite\BlackinMan.png">
+    <Image Include="Sprite\Levietha.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\TralaleloTralala.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\PlayerSpr\BlackinMan.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\Bullets01.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -87,5 +102,25 @@
     <Text Include="Mappdata.txt">
       <Filter>Resource Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="SFX\HURT1.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="SFX\HURT2.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="SFX\HURT3.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="SFX\HURT4.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="SFX\JUMP1.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="SFX\JUMP2.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>

@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Headers",
+    "\\Sprite",
+    "\\Texture"
   ],
-  "SelectedNode": "\\MyGame.sln",
+  "SelectedNode": "\\MyGame.vcxproj",
   "PreviewInSolutionExplorer": false
 }
