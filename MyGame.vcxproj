@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="Headers\Animation.cpp" />
     <ClCompile Include="Headers\CharacterSystem.cpp" />
+    <ClCompile Include="Headers\GUIhandler.cpp" />
     <ClCompile Include="Headers\JsonParser.cpp" />
     <ClCompile Include="Headers\LogicAndMechanic.cpp" />
     <ClCompile Include="Headers\MiscLoader.cpp" />
@@ -147,6 +148,7 @@
   <ItemGroup>
     <ClInclude Include="Headers\Animation.h" />
     <ClInclude Include="Headers\CharacterSystem.h" />
+    <ClInclude Include="Headers\GUIhandler.h" />
     <ClInclude Include="Headers\JsonParsers.h" />
     <ClInclude Include="Headers\LogicAndMechanic.h" />
     <ClInclude Include="Headers\MiscLoader.h" />
@@ -164,6 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Sprite\Bullets01.png" />
+    <Image Include="Sprite\GUI\Health.png" />
+    <Image Include="Sprite\GUI\Overlay.png" />
+    <Image Include="Sprite\GUI\Skill.png" />
     <Image Include="Sprite\Levietha.png" />
     <Image Include="Sprite\PlayerSpr\BlackinMan.png" />
     <Image Include="Sprite\TralaleloTralala.png" />
@@ -178,6 +183,11 @@
     <Media Include="SFX\HURT4.wav" />
     <Media Include="SFX\JUMP1.wav" />
     <Media Include="SFX\JUMP2.wav" />
+    <Media Include="Voiceline\bystander.wav" />
+    <Media Include="Voiceline\dontlikegames.wav" />
+    <Media Include="Voiceline\grandmother.wav" />
+    <Media Include="Voiceline\whereisnapalm.wav" />
+    <Media Include="Voiceline\whoeverdesigned.wav" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\ExtraWide.ttf" />

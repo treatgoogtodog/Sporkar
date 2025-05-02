@@ -45,6 +45,9 @@
     <ClCompile Include="Headers\TextHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Headers\GUIhandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Animation.h">
@@ -80,6 +83,9 @@
     <ClInclude Include="Headers\TextHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\GUIhandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Save\PlayerData.json">
@@ -101,6 +107,15 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Sprite\Bullets01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\Health.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\Overlay.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\Skill.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -126,6 +141,21 @@
       <Filter>Resource Files</Filter>
     </Media>
     <Media Include="SFX\JUMP2.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="Voiceline\bystander.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="Voiceline\dontlikegames.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="Voiceline\grandmother.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="Voiceline\whereisnapalm.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="Voiceline\whoeverdesigned.wav">
       <Filter>Resource Files</Filter>
     </Media>
   </ItemGroup>

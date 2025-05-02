@@ -12,8 +12,10 @@ Player::Player(int x, int y, const std::string& texturePTH, const std::string& t
 	this->curr_anim = "Idle";
 	this->health = 100;
 	this->multipler = multipler;
+	this->Alpla = 255;
 	SDL_SetTextureAlphaMod(texture, 255);
 	SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
+	
 }
 
 Player::~Player() {

@@ -8,7 +8,7 @@ std::vector<obstacledata> obstacle = {
     {"Sprite/Levietha.png", {48,48}, GROUND},
     {"Sprite/TralaleloTralala.png", {48,48}, GROUND},
     {"Sprite/GiangDam.png", {48,48}, GROUND},
-    {"Sprite/Bullet.png",{64,32},AIR }
+    {"Sprite/Bullets01.png",{64,32}, AIR }
 };
 
 std::vector<layer> Layers = {
@@ -33,3 +33,4 @@ std::vector<std::pair<std::string, std::string>> FontPath = {
 	{"Bold", "Fonts/HachicroUndertale.ttf"},
 	{"Default", "Fonts/Pixelpurl.ttf"}
 };
+

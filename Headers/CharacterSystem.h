@@ -21,11 +21,13 @@ public:
     int getY() const { return y; }
     int getWid() const { return width; }
     int getHei() const { return height; }
+	void setAlpha() { SDL_SetTextureAlphaMod(texture, Alpla); }
 private:
     int x, y;
     float multipler;
     int width, height;
     float VelY;
+    int Alpla;
     int IDs = -1;
     std::string curr_anim = "Idle";
     SDL_Texture* texture;

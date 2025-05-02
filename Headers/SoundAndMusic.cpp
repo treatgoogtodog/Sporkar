@@ -22,7 +22,7 @@ std::vector<std::string> SoundManager::GetAudioFiles(const std::string& director
             if (entry.is_regular_file()) {
                 std::string filePath = entry.path().string();
                 std::string __extension = filePath.substr(filePath.find_last_of(".") + 1);
-                if (__extension == "mp3" || __extension == "ogg") {
+                if (__extension == "mp3" || __extension == "ogg" || __extension == "wav") {
                     audioFiles.push_back(filePath);
                 }
             }
@@ -60,6 +60,7 @@ void SoundManager::PlaySoundEffect(const std::string& id, int loops) {
     auto it = soundEffects.find(id);
     if (it != soundEffects.end()) {
         Mix_PlayChannel(-1, it->second, loops);
+		std::cerr << "Playing sound effect with ID '" << id << "'." << std::endl;
     } else {
         std::cerr << "Sound effect with ID '" << id << "' not found!" << std::endl;
     }
@@ -71,7 +72,8 @@ void SoundManager::PlayMusic(const std::string& id, int loops) {
     if (it != musicTracks.end()) {
         if (Mix_PlayMusic(it->second, loops) == -1) {
             std::cerr << "Failed to play music with ID '" << id << "': " << Mix_GetError() << std::endl;
-        }
+		}
+		else { std::cerr << "Playing music with ID " << id << std::endl; }
     } else {
         std::cerr << "Music with ID '" << id << "' not found!" << std::endl;
     }

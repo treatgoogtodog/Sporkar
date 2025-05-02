@@ -14,6 +14,12 @@
 #define DOGDOGSPITEPATH "Sprite\\Dogdog.png"  
 #define DOGDOGSHEETDATA "Sprite\\Dogdog.json"  
 
+#define OVERLAYPATH "Sprite\\GUI\\Overlay.png"
+#define HEALTHBARPATH "Sprite\\GUI\\Health.png"
+#define SKILLBARPATH "Sprite\\GUI\\Skill.png"
+
+#define HEALTHPOS = {18,22}
+#define SKILLPOS = {18,58}
 enum ObsType {  
    AIR,  
    GROUND  

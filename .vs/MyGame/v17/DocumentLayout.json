@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\LogicAndMechanic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\LogicAndMechanic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\LogicAndMechanic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\LogicAndMechanic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SDL_Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\SDL_Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SDL_Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\SDL_Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SoundAndMusic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,73 +15,90 @@
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\SoundAndMusic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\MiscLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\MiscLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\TextHandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\TextHandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\JsonParsers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\JsonParsers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\TextHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\TextHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\MiscLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\MiscLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SDL_Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\SDL_Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SDL_Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\SDL_Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Texture\\PlayerTexture.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Texture\\PlayerTexture.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\JsonParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\JsonParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\MiscLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\MiscLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\MiscLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\MiscLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\LogicAndMechanic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\LogicAndMechanic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\CharacterSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\CharacterSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\CharacterSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\CharacterSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\JsonParsers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\JsonParsers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\GUIhandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\GUIhandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\JsonParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\JsonParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\GUIhandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\GUIhandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\TextHandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\TextHandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\CharacterSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\CharacterSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Animation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\Animation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\FPT\\Downloads\\DriveSheetData.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{630AA799-7919-4340-BEC7-EA879CFF8721}|MyGame.vcxproj|solutionrelative:Headers\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 146,
+      "VerticalTabListWidth": 187,
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -113,20 +114,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
+              "Title": "GUIhandler.h",
+              "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\GUIhandler.h",
+              "RelativeDocumentMoniker": "Headers\\GUIhandler.h",
+              "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\GUIhandler.h",
+              "RelativeToolTip": "Headers\\GUIhandler.h",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAEwBUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-02T14:22:42.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GUIhandler.cpp",
+              "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\GUIhandler.cpp",
+              "RelativeDocumentMoniker": "Headers\\GUIhandler.cpp",
+              "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\GUIhandler.cpp",
+              "RelativeToolTip": "Headers\\GUIhandler.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-02T14:22:29.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "TextHandler.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\TextHandler.h",
               "RelativeDocumentMoniker": "Headers\\TextHandler.h",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\TextHandler.h",
               "RelativeToolTip": "Headers\\TextHandler.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-05-01T12:54:48.383Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "TextHandler.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\TextHandler.cpp",
               "RelativeDocumentMoniker": "Headers\\TextHandler.cpp",
@@ -134,61 +161,38 @@
               "RelativeToolTip": "Headers\\TextHandler.cpp",
               "ViewState": "AgIAAAIAAAAAAAAAAAAEwBMAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-01T12:54:22.746Z"
+              "WhenOpened": "2025-05-01T12:54:22.746Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "SoundAndMusic.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SoundAndMusic.cpp",
               "RelativeDocumentMoniker": "Headers\\SoundAndMusic.cpp",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SoundAndMusic.cpp",
               "RelativeToolTip": "Headers\\SoundAndMusic.cpp",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAEwIAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAEwEsAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-29T05:25:10.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "SoundAndMusic.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SoundAndMusic.h",
               "RelativeDocumentMoniker": "Headers\\SoundAndMusic.h",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SoundAndMusic.h",
               "RelativeToolTip": "Headers\\SoundAndMusic.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-29T05:17:48.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DriveSheetData.json",
-              "DocumentMoniker": "C:\\Users\\FPT\\Downloads\\DriveSheetData.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\DriveSheetData.json",
-              "ToolTip": "C:\\Users\\FPT\\Downloads\\DriveSheetData.json",
-              "RelativeToolTip": "..\\..\\..\\Downloads\\DriveSheetData.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-21T08:03:35.233Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-13T07:23:06.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
               "Title": "PlayerTexture.json",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Texture\\PlayerTexture.json",
               "RelativeDocumentMoniker": "Texture\\PlayerTexture.json",
@@ -196,11 +200,12 @@
               "RelativeToolTip": "Texture\\PlayerTexture.json",
               "ViewState": "AgIAAAsAAAAAAAAAAAAUwCUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-16T18:04:11.211Z"
+              "WhenOpened": "2025-04-16T18:04:11.211Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SDL_Manager.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SDL_Manager.h",
               "RelativeDocumentMoniker": "Headers\\SDL_Manager.h",
@@ -213,20 +218,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "MiscLoader.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\MiscLoader.cpp",
               "RelativeDocumentMoniker": "Headers\\MiscLoader.cpp",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\MiscLoader.cpp",
               "RelativeToolTip": "Headers\\MiscLoader.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-16T15:57:36.328Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 8,
               "Title": "Object.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Object.h",
               "RelativeDocumentMoniker": "Headers\\Object.h",
@@ -234,75 +239,77 @@
               "RelativeToolTip": "Headers\\Object.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T18:45:42.139Z"
+              "WhenOpened": "2025-04-12T18:45:42.139Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "LogicAndMechanic.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\LogicAndMechanic.cpp",
               "RelativeDocumentMoniker": "Headers\\LogicAndMechanic.cpp",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\LogicAndMechanic.cpp",
               "RelativeToolTip": "Headers\\LogicAndMechanic.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAE8AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwD4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-16T15:51:47.785Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Source.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp",
               "RelativeDocumentMoniker": "Source.cpp",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Source.cpp",
               "RelativeToolTip": "Source.cpp",
-              "ViewState": "AgIAABoAAAAAAAAAAADgvyoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-16T11:22:53.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "SDL_Manager.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SDL_Manager.cpp",
               "RelativeDocumentMoniker": "Headers\\SDL_Manager.cpp",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\SDL_Manager.cpp",
               "RelativeToolTip": "Headers\\SDL_Manager.cpp",
-              "ViewState": "AgIAAAIAAAAAAAAAAADgvy8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-16T10:20:32.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "LogicAndMechanic.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\LogicAndMechanic.h",
               "RelativeDocumentMoniker": "Headers\\LogicAndMechanic.h",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\LogicAndMechanic.h",
               "RelativeToolTip": "Headers\\LogicAndMechanic.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAACyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-13T07:18:28.129Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "MiscLoader.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\MiscLoader.h",
               "RelativeDocumentMoniker": "Headers\\MiscLoader.h",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\MiscLoader.h",
               "RelativeToolTip": "Headers\\MiscLoader.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAUwCcAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-13T06:24:36.207Z"
+              "WhenOpened": "2025-04-13T06:24:36.207Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Animation.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Animation.h",
               "RelativeDocumentMoniker": "Headers\\Animation.h",
@@ -314,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Animation.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Animation.cpp",
               "RelativeDocumentMoniker": "Headers\\Animation.cpp",
@@ -322,35 +329,38 @@
               "RelativeToolTip": "Headers\\Animation.cpp",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-13T02:54:49.07Z"
+              "WhenOpened": "2025-04-13T02:54:49.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "CharacterSystem.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\CharacterSystem.cpp",
               "RelativeDocumentMoniker": "Headers\\CharacterSystem.cpp",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\CharacterSystem.cpp",
               "RelativeToolTip": "Headers\\CharacterSystem.cpp",
-              "ViewState": "AgIAABYAAAAAAAAAAAAEwCIAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-12T18:05:57.772Z"
+              "WhenOpened": "2025-04-12T18:05:57.772Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "CharacterSystem.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\CharacterSystem.h",
               "RelativeDocumentMoniker": "Headers\\CharacterSystem.h",
               "ToolTip": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\CharacterSystem.h",
               "RelativeToolTip": "Headers\\CharacterSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T18:05:56.128Z"
+              "WhenOpened": "2025-04-12T18:05:56.128Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "JsonParser.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\JsonParser.cpp",
               "RelativeDocumentMoniker": "Headers\\JsonParser.cpp",
@@ -358,11 +368,12 @@
               "RelativeToolTip": "Headers\\JsonParser.cpp",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-12T18:05:51.87Z"
+              "WhenOpened": "2025-04-12T18:05:51.87Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "JsonParsers.h",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\JsonParsers.h",
               "RelativeDocumentMoniker": "Headers\\JsonParsers.h",
@@ -370,11 +381,12 @@
               "RelativeToolTip": "Headers\\JsonParsers.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T18:05:50.63Z"
+              "WhenOpened": "2025-04-12T18:05:50.63Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "Object.cpp",
               "DocumentMoniker": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Headers\\Object.cpp",
               "RelativeDocumentMoniker": "Headers\\Object.cpp",
@@ -382,7 +394,8 @@
               "RelativeToolTip": "Headers\\Object.cpp",
               "ViewState": "AgIAAGIAAAAAAAAAAAAmwHQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-12T18:05:42.401Z"
+              "WhenOpened": "2025-04-12T18:05:42.401Z",
+              "EditorCaption": ""
             }
           ]
         }
