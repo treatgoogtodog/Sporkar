@@ -1,31 +1,3 @@
-﻿  SoundAndMusic.cpp
-  Source.cpp
-D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\xmemory(700,103): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-  (compiling source file 'Source.cpp')
-      D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\xmemory(700,103):
-      the template instantiation context (the oldest one first) is
-          C:\Users\FPT\Documents\GitHub\Sporkar\Source.cpp(27,19):
-          see reference to function template instantiation 'Layer &std::vector<Layer,std::allocator<Layer>>::emplace_back<const std::string&,const float&,const int&,SDL_Renderer*>(const std::string &,const float &,const int &,SDL_Renderer *&&)' being compiled
-          D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\vector(858,24):
-          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<const std::string&,const float&,const int&,SDL_Renderer*>(const std::string &,const float &,const int &,SDL_Renderer *&&)' being compiled
-          with
-          [
-              _Ty=Layer
-          ]
-          D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\vector(776,20):
-          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<const std::string&,const float&,const int&,SDL_Renderer*>(const std::string &,const float &,const int &,SDL_Renderer *&&)' being compiled
-          with
-          [
-              _Ty=Layer
-          ]
-          D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\vector(794,27):
-          see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const std::string&,const float&,const int&,SDL_Renderer*>(_Alloc &,_Objty *const ,const std::string &,const float &,const int &,SDL_Renderer *&&)' being compiled
-          with
-          [
-              _Alloc=std::allocator<Layer>,
-              _Ty=Layer,
-              _Objty=Layer
-          ]
-  
-  Generating Code...
+﻿  LogicAndMechanic.cpp
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(35,93): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   MyGame.vcxproj -> C:\Users\FPT\Documents\GitHub\Sporkar\x64\Debug\MyGame.exe

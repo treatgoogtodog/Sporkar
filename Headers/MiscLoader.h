@@ -4,6 +4,7 @@
 #include <utility> 
 #include "Animation.h"  
 #include <SDL_mixer.h>  
+#include "TextHandler.h"
 
 // ALL PATHS ARE RELATED TO SOURCE  
 
@@ -34,4 +35,6 @@ extern std::vector<obstacledata> obstacle;
 
 extern std::vector<layer> Layers;  
 
-extern std::vector<std::pair<std::string, std::string>> soundfx; // Fixed std::pair usage
+extern std::vector<std::pair<std::string, std::string>> soundfx; 
+
+extern std::vector<std::pair<std::string, std::string>> FontPath;

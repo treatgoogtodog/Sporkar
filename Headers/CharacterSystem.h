@@ -11,7 +11,7 @@ public:
     Player(int x, int y, const std::string& texturePTH, const std::string& textureDAT, SDL_Renderer* renderer, const float& multipler);
     ~Player();
 
-    bool update(bool isJumping, float gravity, float JumpStreg, int groundLvl);
+    bool update(bool isJumping,bool isFastLanding, float gravity, float JumpStreg, int groundLvl);
 
     void render(SDL_Renderer* renderer, const int& deltaTime, const float& multipler);
 

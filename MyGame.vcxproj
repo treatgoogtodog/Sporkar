@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\Dependences\SDL2_mixer-2.8.1\include;D:\Dependences\SDL2_image-devel-2.8.5-VC\SDL2_image-2.8.5\include;D:\Dependences\SDL2-2.32.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Dependences\SDL2_mixer-2.8.1\lib\x64;D:\Dependences\SDL2_image-devel-2.8.5-VC\SDL2_image-2.8.5\lib\x64;D:\Dependences\SDL2-2.32.0\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Dependences\opencv\build\include;D:\Dependences\SDL2_ttf-devel-2.24.0-VC\SDL2_ttf-2.24.0\include;D:\Dependences\SDL2_mixer-2.8.1\include;D:\Dependences\SDL2_image-devel-2.8.5-VC\SDL2_image-2.8.5\include;D:\Dependences\SDL2-2.32.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Dependences\opencv\build\x64\vc16\lib;D:\Dependences\SDL2_ttf-devel-2.24.0-VC\SDL2_ttf-2.24.0\lib\x64;D:\Dependences\SDL2_mixer-2.8.1\lib\x64;D:\Dependences\SDL2_image-devel-2.8.5-VC\SDL2_image-2.8.5\lib\x64;D:\Dependences\SDL2-2.32.0\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -113,7 +113,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -141,6 +141,7 @@
     <ClCompile Include="Headers\Object.cpp" />
     <ClCompile Include="Headers\SDL_Manager.cpp" />
     <ClCompile Include="Headers\SoundAndMusic.cpp" />
+    <ClCompile Include="Headers\TextHandler.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +155,7 @@
     <ClInclude Include="Headers\NumberMath.h" />
     <ClInclude Include="Headers\Object.h" />
     <ClInclude Include="Headers\SoundAndMusic.h" />
+    <ClInclude Include="Headers\TextHandler.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Save\PlayerData.json" />
@@ -176,6 +178,11 @@
     <Media Include="SFX\HURT4.wav" />
     <Media Include="SFX\JUMP1.wav" />
     <Media Include="SFX\JUMP2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Fonts\ExtraWide.ttf" />
+    <Font Include="Fonts\HachicroUndertale.ttf" />
+    <Font Include="Fonts\Pixelpurl.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

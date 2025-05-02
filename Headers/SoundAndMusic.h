@@ -33,6 +33,8 @@ public:
 
     void SetMusicVolume(int volume);
 
+    int GetMusicCount() const;
+
     void CleanUp();
 
 private:

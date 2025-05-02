@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
 	SoundManager* SFX =new SoundManager();
     dog* DOG = new dog(50, 300, 100, 100, DOGDOGSPITEPATH, SDL->GetRenderer(), 0.3f);
 	Player* PLAYER = new Player(250, 300, PLAYERSPRITEPATH, PLAYERSPRITESHEETDATA, SDL->GetRenderer(), 1.2f);
-
+	TextHandler* TEXT = new TextHandler(SDL->GetRenderer());
     PathManager* PATH = new PathManager();
     SDL_Event event;
     std::vector<Layer> Layerdata;
@@ -29,21 +29,27 @@ int main(int argc, char* argv[]) {
 	for (const auto& sfx : soundfx) {
 		SFX->LoadSoundEffect(sfx.first, sfx.second);
 	}
-
-    std::string musicDirectory = "Music"; // Relative to the current working directory
+    std::string musicDirectory = "./Music/"; // Relative to the current working directory
     std::vector<std::string> audioFiles = SFX->GetAudioFiles(musicDirectory);
 
-    // Print the audio file paths
+    int ids = 0;
     for (const auto& file : audioFiles) {
         std::cout << "Found audio file: " << file << std::endl;
+		if (!SFX->LoadMusic(std::to_string(ids), file)) { SDL_Log("Failed to load music: %s", file.c_str()); }
+        else { SDL_Log("Loaded music: %s", file.c_str()); ids++; }
+		
     }
-	cin.ignore();
-    gameLoop(SDL, PLAYER, PATH, &event, Layerdata, SFX);
+
+	for (const auto& font : FontPath) {
+		TEXT->LoadFont(font.first, font.second, 20);
+	}
+
+    gameLoop(SDL, PLAYER, PATH, &event, Layerdata, SFX, TEXT);
 
     // Clean up
     delete PLAYER;
     delete PATH;
-	delete DOG;
+    delete DOG;
 
     return 0;
 }

@@ -22,14 +22,19 @@ Player::~Player() {
 	}
 }
 
-bool Player::update(bool isJumping, float gravity, float JumpStreg, int groundLvl) {
+bool Player::update(bool isJumping,bool isFastLanding, float gravity, float JumpStreg, int groundLvl) {
 	bool jump = false;
 	if (isJumping && y == groundLvl) {
 		VelY = -JumpStreg;
 		jump = true;
 	}
-
+	
 	VelY += gravity; 
+
+	if (isFastLanding && y < groundLvl) {
+		VelY += gravity * 2;
+	}
+
 	y += static_cast<int>(VelY);
 
 	if (y > groundLvl) {

@@ -42,6 +42,9 @@
     <ClCompile Include="Headers\SoundAndMusic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Headers\TextHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Animation.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\SoundAndMusic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\TextHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -122,5 +128,10 @@
     <Media Include="SFX\JUMP2.wav">
       <Filter>Resource Files</Filter>
     </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Fonts\ExtraWide.ttf" />
+    <Font Include="Fonts\HachicroUndertale.ttf" />
+    <Font Include="Fonts\Pixelpurl.ttf" />
   </ItemGroup>
 </Project>

@@ -27,3 +27,9 @@ std::vector<std::pair<std::string, std::string>> soundfx = {
     {"jump1","SFX/JUMP1.wav"},
     {"jump2","SFX/JUMP2.wav"}
 };
+ 
+std::vector<std::pair<std::string, std::string>> FontPath = {
+	{"Special", "Fonts/ExtraWide.ttf"},
+	{"Bold", "Fonts/HachicroUndertale.ttf"},
+	{"Default", "Fonts/Pixelpurl.ttf"}
+};

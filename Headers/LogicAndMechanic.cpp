@@ -1,7 +1,7 @@
 #include "LogicAndMechanic.h"
 
 
-void gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Event* event, std::vector<Layer>& backgroundLayers, SoundManager* SFX) {
+void gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Event* event, std::vector<Layer>& backgroundLayers, SoundManager* SFX, TextHandler* TEXT) {
     bool gameover = false;
     bool quit = false;
     int intervalSpawn = 1200;
@@ -10,9 +10,14 @@ void gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Event* ev
     int previousTime = SDL_GetTicks();
     int speed = 5;
 
+    int scoreupdt = 0;
+    uint64_t Score = 0;
+
+
     SDL_Texture* groundTexture = LoadTexture(SDL->GetRenderer(), GROUNDSPRITEPATH);
 
     while (!quit && !gameover) {
+        bool PlayingMusic = Mix_PlayingMusic();
         int currentTime = SDL_GetTicks();
         int deltaTime = currentTime - previousTime;
 
@@ -21,25 +26,27 @@ void gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Event* ev
                 quit = true;
             }
         }
-
+		if (!PlayingMusic) {
+            int toPlay = (rand() % SFX->GetMusicCount() + rand()) % SFX->GetMusicCount();
+			SFX->PlayMusic(to_string(toPlay), 1);
+		}
         SDL_RenderClear(SDL->GetRenderer());
 
-        // Render parallax background with deltaTime and speed
         RenderParallaxBackground(SDL->GetRenderer(), backgroundLayers, 800, 600, deltaTime, speed);
-
         // Update player and game logic
-        bool isJumping = SDL->IsKeyDown(SDL_SCANCODE_SPACE);
+        bool isJumping = SDL->IsKeyDown(SDL_SCANCODE_Z);
+		bool isFastlanding = SDL->IsKeyDown(SDL_SCANCODE_X);
         float gravity = 0.5f;
         float jumpStrength = 10.0f;
         int groundLevel = 300;
-        bool jump = PLAYER->update(isJumping, gravity, jumpStrength, groundLevel);
+        bool jump = PLAYER->update(isJumping,isFastlanding, gravity, jumpStrength, groundLevel);
 
         if (gameTime >= 3000) {
             speed += 1;
             gameTime = 0;
-            std::cout << "Speed: " << speed << std::endl;
         }
-
+		TEXT->RenderText("Default", "Speed: " + std::to_string(speed), 10, 50, { 255, 0, 0, 255 }, 30);
+		
         PATH->UPDATE(SDL->GetRenderer(), speed);
         spawnTime += deltaTime;
 
@@ -56,8 +63,12 @@ void gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Event* ev
             std::cout << "Player Health: " << PLAYER->health << std::endl;
 			string ToPlay = "hurt" + std::to_string(rand() % 4 + 1);
             SFX->PlaySoundEffect(ToPlay);
+            Score -= 100;
+			TEXT->RenderText("Bold", "-100", 10, 150, { 255, 0, 0, 255 }, 30);
         }
+        TEXT->RenderText("Default", "Player Health: " + std::to_string(PLAYER->health), 10, 10, { 255, 0, 0, 255 }, 30);
 
+        
         if (PLAYER->health <= 0) {
             gameover = true;
         }
@@ -65,7 +76,12 @@ void gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Event* ev
 			string ToPlay = "jump" + std::to_string(rand() % 2 + 1);
 			SFX->PlaySoundEffect(ToPlay);
         }
-
+		if (scoreupdt >= 100) {
+            Score += static_cast<int>(speed * (rand() * 2 / 1000));
+			scoreupdt = 0;
+		}
+        
+        TEXT->RenderText("Bold", std::to_string(Score), 10, 100, { 255, 0, 0, 255 }, 30);
         // Render ground and other game elements
         PATH->renderGround(SDL->GetRenderer(), groundTexture, speed);
         PATH->renderPath(SDL->GetRenderer());
@@ -80,5 +96,6 @@ void gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Event* ev
         SDL_Delay(delayTime);
         previousTime = currentTime;
         gameTime += deltaTime;
+		scoreupdt += deltaTime;
     }
 }

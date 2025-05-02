@@ -21,13 +21,13 @@ std::vector<std::string> SoundManager::GetAudioFiles(const std::string& director
         for (const auto& entry : fs::directory_iterator(directory)) {
             if (entry.is_regular_file()) {
                 std::string filePath = entry.path().string();
-                std::string __extension = filePath.substr(filePath.find_last_not_of(".") + 1);
+                std::string __extension = filePath.substr(filePath.find_last_of(".") + 1);
                 if (__extension == "mp3" || __extension == "ogg") {
                     audioFiles.push_back(filePath);
                 }
             }
         }
-	}
+    }
     catch (const fs::filesystem_error& e) {
         std::cerr << "Error reading directory: " << e.what() << std::endl;
     }
@@ -125,4 +125,9 @@ void SoundManager::CleanUp() {
         Mix_FreeMusic(pair.second);
     }
     musicTracks.clear();
+}
+
+// Get the number of loaded music tracks
+int SoundManager::GetMusicCount() const{
+	return musicTracks.size();
 }
