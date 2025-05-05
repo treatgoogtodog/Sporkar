@@ -5,18 +5,18 @@
 #include <vector>
 
 struct Frame {
-    int x; // Tọa độ X trên spritesheet
-    int y; // Tọa độ Y trên spritesheet
-    int width;  // Chiều rộng của khung hình
-    int height; // Chiều cao của khung hình
+    int x; 
+    int y; 
+    int width;
+    int height;
     Frame(int inpx, int inpy, int inpw, int inph) :x(inpx), y(inpy), width(inpw), height(inph) {}
 };
 
 struct Animation {
-    SDL_Texture* texture;    // Texture của spritesheet
-    std::vector<Frame> frames; // Danh sách các khung hình
+    SDL_Texture* texture;
+    std::vector<Frame> frames;
     int elapsedTime = 0;
-    int frameTime = 72; // 71.4ms~72 frametime => 14Fps
+    int frameTime = 72;
     int currentFrame = 0;
     void addframe(Frame f) {
         frames.push_back(f);

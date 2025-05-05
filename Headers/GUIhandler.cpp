@@ -53,3 +53,48 @@ void GUIhandler::render(SDL_Renderer* renderer, float HealthP, float SkillP) {
 	}
 }
 
+Button::Button(SDL_Renderer* renderer, const string& texturePath,const map<string, SDL_Rect>& ButtonState, int x, int y, int w, int h) {
+	this->renderer = renderer;
+	this->x = x;
+	this->y = y;
+	this->w = w;
+	this->h = h;
+	texture = IMG_LoadTexture(renderer, texturePath.c_str());
+	if (!texture) {
+		SDL_Log("Failed to load button texture: %s", IMG_GetError());
+	}
+	for (const auto& state : ButtonState) {
+		Buttons[state.first] = new SDL_Rect(state.second);
+	}
+}
+
+Button::~Button() {
+	if (texture) {
+		SDL_DestroyTexture(texture);
+	}
+	for (auto& pair : Buttons) {
+		delete pair.second;
+	}
+}
+
+void Button::render(SDL_Renderer* renderer) {
+	SDL_RenderCopy(renderer, texture, Buttons[state], &rect);
+}
+bool Button::isClicked(int mouseX, int mouseY) {
+	if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+		clickedon = true;
+		state = "Clicked";
+		return true;
+	}
+	clickedon = false;
+	return false;
+}
+
+bool Button::isHovered(int mouseX, int mouseY) {
+	if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+		state = "Hover";
+		return true;
+	}
+	state = "Normal";
+	return false;
+}

@@ -41,14 +41,7 @@ int main(int argc, char* argv[]) {
         else { SDL_Log("Loaded music: %s", file.c_str()); ids++; }
     }
 	std::string voiceLineDirectory = "./Voiceline/";
-    std::vector<std::string> voiceline = SFX->GetAudioFiles(musicDirectory);
-
-    ids = 0;
-    for (const auto& file : audioFiles) {
-        std::cout << "Found audio file: " << file << std::endl;
-        if (!SFX->LoadSoundEffect("voice" + std::to_string(ids), file)) { SDL_Log("Failed to load audio: %s", file.c_str()); }
-        else { SDL_Log("Loaded music: %s", file.c_str()); ids++; }
-    }
+    std::vector<std::string> voiceline = SFX->GetAudioFiles(voiceLineDirectory);
 
 	for (const auto& font : FontPath) {
 		TEXT->LoadFont(font.first, font.second, 20);

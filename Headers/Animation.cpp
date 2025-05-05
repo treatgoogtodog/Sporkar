@@ -47,13 +47,13 @@ void DrawAnimFrame(SDL_Renderer* renderer, Animation& anim, int x, int y, int fr
 
 void DrawTexture(SDL_Renderer* renderer, SDL_Texture* texture, int x, int y, int wid, int hei) {
     SDL_Rect destRect = { x,y, wid, hei};
-    SDL_RenderCopy(renderer, texture, NULL,&destRect );
+    SDL_RenderCopy(renderer, texture, NULL, &destRect );
 }
 
 void RenderParallaxBackground(SDL_Renderer* renderer, std::vector<Layer>& layers, int screenWidth, int screenHeight, int deltaTime, float speed) {
     for (auto& layer : layers) {
         
-        float delta = static_cast<float>(deltaTime)/100; // Convert deltaTime to seconds
+        float delta = static_cast<float>(deltaTime)/100;
         layer.xOffset -= layer.speed * speed * delta;
 
         if (layer.xOffset <= -screenWidth) {
@@ -68,4 +68,3 @@ void RenderParallaxBackground(SDL_Renderer* renderer, std::vector<Layer>& layers
         SDL_RenderCopy(renderer, layer.texture, &srcRect, &destRect2);
     }
 }
-

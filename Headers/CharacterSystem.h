@@ -1,5 +1,5 @@
 #pragma once
-// ALL TIMER ARE SET IN MILLISECOND!!
+
 #include <SDL.h>
 #include <string>
 #include "JsonParsers.h"
@@ -21,7 +21,7 @@ public:
     int getY() const { return y; }
     int getWid() const { return width; }
     int getHei() const { return height; }
-	void setAlpha() { SDL_SetTextureAlphaMod(texture, Alpla); }
+	void setAlpha(int alpha) { SDL_SetTextureAlphaMod(texture, alpha); }
 private:
     int x, y;
     float multipler;

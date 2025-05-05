@@ -19,10 +19,6 @@ public:
     void SetBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
     bool IsKeyDown(SDL_Scancode key);
 
-    // Mixer-related methods
-    bool InitializeMixer(int frequency = 44100, Uint16 format = MIX_DEFAULT_FORMAT, int channels = 2, int chunksize = 2048);
-    void CloseMixer();
-
 private:
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -30,5 +26,5 @@ private:
     const Uint8* keyStates;
     int Width, Height;
 
-    std::map<std::string, SDL_Texture*> textureMap; // texture
+    std::map<std::string, SDL_Texture*> textureMap;
 };

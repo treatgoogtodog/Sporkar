@@ -60,7 +60,6 @@ void SoundManager::PlaySoundEffect(const std::string& id, int loops) {
     auto it = soundEffects.find(id);
     if (it != soundEffects.end()) {
         Mix_PlayChannel(-1, it->second, loops);
-		std::cerr << "Playing sound effect with ID '" << id << "'." << std::endl;
     } else {
         std::cerr << "Sound effect with ID '" << id << "' not found!" << std::endl;
     }
@@ -73,33 +72,28 @@ void SoundManager::PlayMusic(const std::string& id, int loops) {
         if (Mix_PlayMusic(it->second, loops) == -1) {
             std::cerr << "Failed to play music with ID '" << id << "': " << Mix_GetError() << std::endl;
 		}
-		else { std::cerr << "Playing music with ID " << id << std::endl; }
     } else {
         std::cerr << "Music with ID '" << id << "' not found!" << std::endl;
     }
 }
     
 
-// Stop music
 void SoundManager::StopMusic() {
     Mix_HaltMusic();
 }
 
-// Pause music
 void SoundManager::PauseMusic() {
     if (Mix_PlayingMusic()) {
         Mix_PauseMusic();
     }
 }
 
-// Resume music
 void SoundManager::ResumeMusic() {
     if (Mix_PausedMusic()) {
         Mix_ResumeMusic();
     }
 }
 
-// Set volume for a specific sound effect
 void SoundManager::SetSoundEffectVolume(const std::string& id, int volume) {
     auto it = soundEffects.find(id);
     if (it != soundEffects.end()) {
@@ -109,27 +103,22 @@ void SoundManager::SetSoundEffectVolume(const std::string& id, int volume) {
     }
 }
 
-// Set volume for music
 void SoundManager::SetMusicVolume(int volume) {
     Mix_VolumeMusic(volume);
 }
 
-// Clean up all loaded sounds and music
 void SoundManager::CleanUp() {
-    // Free all sound effects
     for (auto& pair : soundEffects) {
         Mix_FreeChunk(pair.second);
     }
     soundEffects.clear();
 
-    // Free all music tracks
     for (auto& pair : musicTracks) {
         Mix_FreeMusic(pair.second);
     }
     musicTracks.clear();
 }
 
-// Get the number of loaded music tracks
 int SoundManager::GetMusicCount() const{
 	return musicTracks.size();
 }

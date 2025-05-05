@@ -6,7 +6,6 @@
 #include <SDL_mixer.h>  
 #include "TextHandler.h"
 
-// ALL PATHS ARE RELATED TO SOURCE  
 
 #define PLAYERSPRITEPATH "Sprite\\PlayerSpr\\BlackinMan.png"  
 #define PLAYERSPRITESHEETDATA "Sprite\\PlayerSpr\\BlackinMan.json"  
@@ -28,7 +27,7 @@ enum ObsType {
 struct obstacledata {  
    std::string spritepath;  
    std::pair<int, int> size;  
-   ObsType type; // width, height  
+   ObsType type;
 };  
 
 struct layer {  
