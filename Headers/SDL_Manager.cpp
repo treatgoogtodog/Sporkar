@@ -4,7 +4,6 @@
 #include "SDL_Manager.h"
 
 SDL_Manager::SDL_Manager(const std::string& windowTitle, int width, int height) :window(nullptr), renderer(nullptr), initialized(false) {
-	//init
 	if (SDL_Init(SDL_INIT_VIDEO) != 0) {
 		std::cout << "Initialization Error:" << SDL_GetError() << std::endl;
 		return;

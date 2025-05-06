@@ -1,7 +1,7 @@
 #include "Object.h"
 
 
-BaseObject::BaseObject(const std::string& texturePath, int x, int y, int width, int height, SDL_Renderer* renderer) {
+BaseObject::BaseObject(const std::string& texturePath, int x, int y, int width, int height, SDL_Renderer* renderer,int type) {
     this->x = x;
     this->y = y;
     this->width = width;
@@ -15,6 +15,7 @@ BaseObject::BaseObject(const std::string& texturePath, int x, int y, int width, 
     }
     texture = SDL_CreateTextureFromSurface(renderer, surface);
     SDL_FreeSurface(surface);
+	this->type = type;
 }
 
 BaseObject::~BaseObject() {
@@ -34,8 +35,8 @@ void BaseObject::move(int speed) {
     this->x -= speed;
 }
 
-void PathManager::addNewObject(int x, int y, int width, int height, const std::string& texturePath, SDL_Renderer* renderer) {
-    BaseObject* toCreate = new BaseObject(texturePath, x, y, width, height, renderer);
+void PathManager::addNewObject(int x, int y, int width, int height, const std::string& texturePath, SDL_Renderer* renderer, int type) {
+    BaseObject* toCreate = new BaseObject(texturePath, x, y, width, height, renderer, type);
     if (!toCreate->getTexture()) { SDL_Log("Invalid texture! Aborting Creation"); return; }
     pathObjects.push_front(toCreate);
 }
@@ -50,7 +51,11 @@ void PathManager::removeOldObjects(int playerX) {
 void PathManager::UPDATE(SDL_Renderer* renderer, int speed) {
     for (BaseObject* obj : pathObjects) {
         obj->move(speed);
+        if (obj->getType() == 0) {
+            obj->move(speed / 2);
+        }
     }
+
 }
 
 void PathManager::renderPath(SDL_Renderer* renderer) const {

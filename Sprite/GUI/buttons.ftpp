@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "version": "0.6.7"
+  },
+  "savePath": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Sprite\\GUI",
+  "images": [
+    {
+      "name": "HSCORE_CLICK.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/HSCORE_CLICK.png",
+      "folder": ""
+    },
+    {
+      "name": "HSCORE_HOVER.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/HSCORE_HOVER.png",
+      "folder": ""
+    },
+    {
+      "name": "HSCORE_IDLE.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/HSCORE_IDLE.png",
+      "folder": ""
+    },
+    {
+      "name": "QUIT_CLICK.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/QUIT_CLICK.png",
+      "folder": ""
+    },
+    {
+      "name": "QUIT_HOVER.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/QUIT_HOVER.png",
+      "folder": ""
+    },
+    {
+      "name": "QUIT_IDLE.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/QUIT_IDLE.png",
+      "folder": ""
+    },
+    {
+      "name": "START_CLICK.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/START_CLICK.png",
+      "folder": ""
+    },
+    {
+      "name": "START_HOVER.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/START_HOVER.png",
+      "folder": ""
+    },
+    {
+      "name": "START_IDLE.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/START_IDLE.png",
+      "folder": ""
+    }
+  ],
+  "folders": [],
+  "packOptions": {
+    "textureName": "buttons",
+    "textureFormat": "png",
+    "removeFileExtension": false,
+    "prependFolderName": true,
+    "base64Export": false,
+    "tinify": false,
+    "tinifyKey": "",
+    "scale": 1,
+    "filter": "none",
+    "exporter": "JSON (hash)",
+    "fileName": "pack-result",
+    "savePath": "C:\\Users\\FPT\\Documents\\GitHub\\Sporkar\\Sprite\\GUI",
+    "width": 1024,
+    "height": 1024,
+    "fixedSize": false,
+    "powerOfTwo": false,
+    "padding": 0,
+    "extrude": 0,
+    "allowRotation": false,
+    "allowTrim": false,
+    "trimMode": "crop",
+    "alphaThreshold": "0",
+    "detectIdentical": true,
+    "packer": "MaxRectsBin",
+    "packerMethod": "BestShortSideFit"
+  }
+}

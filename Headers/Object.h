@@ -9,9 +9,10 @@
 #include "CharacterSystem.h"
 #include "JsonParsers.h"
 
+
 class BaseObject {
 public:
-    BaseObject(const std::string& texturePath, int x, int y, int width, int height, SDL_Renderer* renderer);
+    BaseObject(const std::string& texturePath, int x, int y, int width, int height, SDL_Renderer* renderer, int type);
     ~BaseObject();
 
     void render(SDL_Renderer* renderer) const;
@@ -21,17 +22,19 @@ public:
     int getY() const { return y; }
     int getWidth() const { return width; }
     int getHeight() const { return height; }
+	int getType() const { return type; }
     SDL_Texture* getTexture() const { return texture; };
     bool reg;
 
 private:
     int x, y, width, height;
     SDL_Texture* texture;    
+	int type;
 };
 
 class PathManager {
 public:
-    void addNewObject(int x, int y, int width, int height, const std::string& texturePath, SDL_Renderer* renderer);
+    void addNewObject(int x, int y, int width, int height, const std::string& texturePath, SDL_Renderer* renderer, int type);
 
     void removeOldObjects(int playerX);
 

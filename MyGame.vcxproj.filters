@@ -86,6 +86,12 @@
     <ClInclude Include="Headers\GUIhandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Popup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Save\PlayerData.json">
@@ -95,6 +101,8 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="Sprite\PlayerSpr\BlackinMan.json" />
+    <None Include="Sprite\GUI\buttons.ftpp" />
+    <None Include="Sprite\GUI\buttons.json" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Sprite\Levietha.png">
@@ -118,11 +126,69 @@
     <Image Include="Sprite\GUI\Skill.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="favicon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\buttons.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\HSCORE_CLICK.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\HSCORE_HOVER.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\HSCORE_IDLE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\QUIT_CLICK.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\QUIT_HOVER.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\QUIT_IDLE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\sound_off.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\sound_on.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\sound_slider.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\sound_slider_t.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\Splash.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\START_CLICK.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\START_HOVER.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\START_IDLE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\gameover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\Pausebuttons.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Sprite\GUI\PauseMenu.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Mappdata.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include=".sav" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="SFX\HURT1.wav">
@@ -158,10 +224,19 @@
     <Media Include="Voiceline\whoeverdesigned.wav">
       <Filter>Resource Files</Filter>
     </Media>
+    <Media Include="TMusic\Porter Robinson - Sea of Voices.mp3" />
+    <Media Include="TMusic\d4vd - Feel It.mp3" />
+    <Media Include="TMusic\Evanescence - Afterlife.mp3" />
+    <Media Include="TMusic\Let It Happen.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\ExtraWide.ttf" />
     <Font Include="Fonts\HachicroUndertale.ttf" />
     <Font Include="Fonts\Pixelpurl.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

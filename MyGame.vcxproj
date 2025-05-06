@@ -149,6 +149,7 @@
     <ClInclude Include="Headers\Animation.h" />
     <ClInclude Include="Headers\CharacterSystem.h" />
     <ClInclude Include="Headers\GUIhandler.h" />
+    <ClInclude Include="Headers\Popup.h" />
     <ClInclude Include="Headers\JsonParsers.h" />
     <ClInclude Include="Headers\LogicAndMechanic.h" />
     <ClInclude Include="Headers\MiscLoader.h" />
@@ -158,22 +159,45 @@
     <ClInclude Include="Headers\Object.h" />
     <ClInclude Include="Headers\SoundAndMusic.h" />
     <ClInclude Include="Headers\TextHandler.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Save\PlayerData.json" />
+    <None Include="Sprite\GUI\buttons.ftpp" />
+    <None Include="Sprite\GUI\buttons.json" />
     <None Include="Sprite\PlayerSpr\BlackinMan.json" />
     <None Include="Texture\PlayerTexture.json" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="favicon.ico" />
     <Image Include="Sprite\Bullets01.png" />
+    <Image Include="Sprite\GUI\buttons.png" />
+    <Image Include="Sprite\GUI\gameover.png" />
     <Image Include="Sprite\GUI\Health.png" />
+    <Image Include="Sprite\GUI\HSCORE_CLICK.png" />
+    <Image Include="Sprite\GUI\HSCORE_HOVER.png" />
+    <Image Include="Sprite\GUI\HSCORE_IDLE.png" />
     <Image Include="Sprite\GUI\Overlay.png" />
+    <Image Include="Sprite\GUI\Pausebuttons.png" />
+    <Image Include="Sprite\GUI\PauseMenu.png" />
+    <Image Include="Sprite\GUI\QUIT_CLICK.png" />
+    <Image Include="Sprite\GUI\QUIT_HOVER.png" />
+    <Image Include="Sprite\GUI\QUIT_IDLE.png" />
     <Image Include="Sprite\GUI\Skill.png" />
+    <Image Include="Sprite\GUI\sound_off.png" />
+    <Image Include="Sprite\GUI\sound_on.png" />
+    <Image Include="Sprite\GUI\sound_slider.png" />
+    <Image Include="Sprite\GUI\sound_slider_t.png" />
+    <Image Include="Sprite\GUI\Splash.png" />
+    <Image Include="Sprite\GUI\START_CLICK.png" />
+    <Image Include="Sprite\GUI\START_HOVER.png" />
+    <Image Include="Sprite\GUI\START_IDLE.png" />
     <Image Include="Sprite\Levietha.png" />
     <Image Include="Sprite\PlayerSpr\BlackinMan.png" />
     <Image Include="Sprite\TralaleloTralala.png" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include=".sav" />
     <Text Include="Mappdata.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +207,10 @@
     <Media Include="SFX\HURT4.wav" />
     <Media Include="SFX\JUMP1.wav" />
     <Media Include="SFX\JUMP2.wav" />
+    <Media Include="TMusic\d4vd - Feel It.mp3" />
+    <Media Include="TMusic\Evanescence - Afterlife.mp3" />
+    <Media Include="TMusic\Let It Happen.mp3" />
+    <Media Include="TMusic\Porter Robinson - Sea of Voices.mp3" />
     <Media Include="Voiceline\bystander.wav" />
     <Media Include="Voiceline\dontlikegames.wav" />
     <Media Include="Voiceline\grandmother.wav" />
@@ -193,6 +221,9 @@
     <Font Include="Fonts\ExtraWide.ttf" />
     <Font Include="Fonts\HachicroUndertale.ttf" />
     <Font Include="Fonts\Pixelpurl.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

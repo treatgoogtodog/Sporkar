@@ -15,6 +15,8 @@ public:
 
     void render(SDL_Renderer* renderer, const int& deltaTime, const float& multipler);
 
+	void DrawFrozen(SDL_Renderer* renderer, const float& multipler);
+
     void UpdateIDs(bool isJumping);
     int health;
     int getX() const { return x; }

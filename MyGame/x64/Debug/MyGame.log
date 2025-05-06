@@ -1,49 +1,11 @@
-﻿  Animation.cpp
-  CharacterSystem.cpp
-  GUIhandler.cpp
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\GUIhandler.cpp(44,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\GUIhandler.cpp(44,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\GUIhandler.cpp(45,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\GUIhandler.cpp(45,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\GUIhandler.cpp(50,55): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\GUIhandler.cpp(50,55): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\GUIhandler.cpp(51,34): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\GUIhandler.cpp(51,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  JsonParser.cpp
-  LogicAndMechanic.cpp
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(54,93): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(107,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(90,15): warning C4101: 'displayHealthBar': unreferenced local variable
-  MiscLoader.cpp
-  Object.cpp
-C:\Users\FPT\Documents\GitHub\Sporkar\Headers\Object.cpp(117,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  Source.cpp
-D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\xmemory(700,103): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-  (compiling source file 'Source.cpp')
-      D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\xmemory(700,103):
-      the template instantiation context (the oldest one first) is
-          C:\Users\FPT\Documents\GitHub\Sporkar\Source.cpp(29,19):
-          see reference to function template instantiation 'Layer &std::vector<Layer,std::allocator<Layer>>::emplace_back<const std::string&,const float&,const int&,SDL_Renderer*>(const std::string &,const float &,const int &,SDL_Renderer *&&)' being compiled
-          D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\vector(858,24):
-          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<const std::string&,const float&,const int&,SDL_Renderer*>(const std::string &,const float &,const int &,SDL_Renderer *&&)' being compiled
-          with
-          [
-              _Ty=Layer
-          ]
-          D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\vector(776,20):
-          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<const std::string&,const float&,const int&,SDL_Renderer*>(const std::string &,const float &,const int &,SDL_Renderer *&&)' being compiled
-          with
-          [
-              _Ty=Layer
-          ]
-          D:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\vector(794,27):
-          see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const std::string&,const float&,const int&,SDL_Renderer*>(_Alloc &,_Objty *const ,const std::string &,const float &,const int &,SDL_Renderer *&&)' being compiled
-          with
-          [
-              _Alloc=std::allocator<Layer>,
-              _Ty=Layer,
-              _Objty=Layer
-          ]
-  
-  Generating Code...
+﻿  LogicAndMechanic.cpp
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(55,93): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(112,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(168,28): warning C4244: 'argument': conversion from 'uint64_t' to 'int', possible loss of data
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(95,15): warning C4101: 'displayHealthBar': unreferenced local variable
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(213,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(215,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(246,41): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(342,1): warning C4715: 'GamePause': not all control paths return a value
+C:\Users\FPT\Documents\GitHub\Sporkar\Headers\LogicAndMechanic.cpp(409,1): warning C4715: 'GameOver': not all control paths return a value
   MyGame.vcxproj -> C:\Users\FPT\Documents\GitHub\Sporkar\x64\Debug\MyGame.exe

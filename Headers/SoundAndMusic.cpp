@@ -7,6 +7,10 @@ SoundManager::SoundManager() {
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
         std::cerr << "SDL_mixer could not initialize! SDL_mixer Error: " << Mix_GetError() << std::endl;
     }
+	this->CustomMusicCounter = 0;
+	this->ThemeMusicCounter = 0;
+	this->musicVolume = MIX_MAX_VOLUME/2;
+	this->soundEffectVolume = MIX_MAX_VOLUME / 2;
 }
 
 SoundManager::~SoundManager() {
@@ -55,7 +59,7 @@ bool SoundManager::LoadMusic(const std::string& id, const std::string& filePath)
     return true;
 }
 
-// Play a sound effect
+
 void SoundManager::PlaySoundEffect(const std::string& id, int loops) {
     auto it = soundEffects.find(id);
     if (it != soundEffects.end()) {
@@ -65,7 +69,7 @@ void SoundManager::PlaySoundEffect(const std::string& id, int loops) {
     }
 }
 
-// Play music
+
 void SoundManager::PlayMusic(const std::string& id, int loops) {
     auto it = musicTracks.find(id);
     if (it != musicTracks.end()) {
@@ -76,22 +80,20 @@ void SoundManager::PlayMusic(const std::string& id, int loops) {
         std::cerr << "Music with ID '" << id << "' not found!" << std::endl;
     }
 }
-    
+
+void SoundManager::OneTimeSFX(const std::string& pth) {
+	Mix_Chunk* chunk = Mix_LoadWAV(pth.c_str());
+	if (chunk) {
+		Mix_PlayChannel(-1, chunk, 0);
+		Mix_FreeChunk(chunk);
+	}
+	else {
+		std::cerr << "Failed to load sound effect: " << pth << "|" << Mix_GetError() << std::endl;
+	}
+}
 
 void SoundManager::StopMusic() {
     Mix_HaltMusic();
-}
-
-void SoundManager::PauseMusic() {
-    if (Mix_PlayingMusic()) {
-        Mix_PauseMusic();
-    }
-}
-
-void SoundManager::ResumeMusic() {
-    if (Mix_PausedMusic()) {
-        Mix_ResumeMusic();
-    }
 }
 
 void SoundManager::SetSoundEffectVolume(const std::string& id, int volume) {
@@ -121,4 +123,28 @@ void SoundManager::CleanUp() {
 
 int SoundManager::GetMusicCount() const{
 	return musicTracks.size();
+}
+
+int SoundManager::GetCustomCount() const {
+    return this->CustomMusicCounter;
+}
+
+int SoundManager::GetThemeCount() const {
+    return this->ThemeMusicCounter;
+}
+
+void SoundManager::AddToCustom() {
+    CustomMusicCounter++;
+}
+
+void SoundManager::AddToTheme() {
+    ThemeMusicCounter++;
+}
+
+void SoundManager::AddThemeInfo(std::string info) {
+    this->themeInfo.push_back(info);
+}
+
+std::pair<int, int> SoundManager::GetVolume() const {
+	return std::make_pair(this->musicVolume, this->soundEffectVolume);
 }

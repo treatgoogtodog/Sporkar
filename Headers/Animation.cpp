@@ -10,7 +10,15 @@ using namespace std;
 
 SDL_Texture* LoadTexture(SDL_Renderer* renderer, const std::string& path) {
     SDL_Surface* surface = IMG_Load(path.c_str());
+    if (!surface) {
+        SDL_Log("Failed to load image: %s", IMG_GetError());
+        return nullptr;
+    }
     SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+	if (!texture) {
+		SDL_Log("Failed to load texture: %s", IMG_GetError());
+		return nullptr;
+	}
     SDL_FreeSurface(surface);
     return texture;
 }

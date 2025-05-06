@@ -2,11 +2,13 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
+#include <iostream>
 #include <string>
 #include <map>
 #include <utility>
 
 #include "MiscLoader.h"
+#include "SoundAndMusic.h"
 
 using namespace std;
 
@@ -22,39 +24,51 @@ private:
 	map<string, SDL_Texture*> ElementTXT;
 	SDL_Renderer* renderer;
 	int width, height;
+	
 };
 
 class Button {
 public:
-	Button(SDL_Renderer* renderer, const string& texturePath, const map<string, SDL_Rect>& ButtonState, int x, int y, int w, int h);
+	Button(SDL_Renderer* renderer,SoundManager* SFX, SDL_Texture* texture, const map<string, SDL_Rect>& ButtonState, int x, int y, int w, int h);
 	~Button();
 	void render(SDL_Renderer* renderer);
-	bool isClicked(int mouseX, int mouseY);
+	void update(int mouseX, int mouseY, int deltaTime, bool clicked);
+	bool isClicked(int mouseX, int mouseY, bool clicked);
 	bool isHovered(int mouseX, int mouseY);
+	void Move(int x, int y);
 private:
 	SDL_Texture* texture;
+	SoundManager* SFX;
 	map<string, SDL_Rect*> Buttons;
-	SDL_Rect rect;
+	SDL_Rect rect = { 0,0,0,0 };
 	SDL_Renderer* renderer;
+	double animationProgress = 0.0;
+	double currentOffsetX = 0.0;
 	int x, y, w, h;
 	bool clickedon;
+	bool isHover = false;
 	string state;
+	int time;
 };
 
 class Slider {
 public:
-	Slider(SDL_Renderer* renderer, const string& texturePath, int x, int y, int w, int h);
+	Slider(SDL_Renderer* renderer, const string& texturePath,const string& sliderPath, int x, int y, int w, int h);
 	~Slider();
 	void render(SDL_Renderer* renderer);
-	bool isClicked(int mouseX, int mouseY);
-	bool isHovered(int mouseX, int mouseY);
+	void update(int mouseX, int mouseY, bool clicked);
+	bool isClicked(int mouseX, int mouseY, bool click);
 	void setValue(float value);
 	float getValue();
 private:
-	SDL_Texture* texture;
+	SDL_Texture* R_texture;
+	SDL_Texture* S_texture;
 	SDL_Rect rect;
 	SDL_Renderer* renderer;
 	int x, y, w, h;
-	bool clickedon;
 	float value;
+};
+
+class MUTE {
+
 };

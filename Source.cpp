@@ -10,6 +10,8 @@
 #include <string>
 #include <map>
 
+
+
 int main(int argc, char* argv[]) {
 	SDL_Manager* SDL = new SDL_Manager("NegaRun", 800, 600);
 
@@ -31,6 +33,9 @@ int main(int argc, char* argv[]) {
 	for (const auto& sfx : soundfx) {
 		SFX->LoadSoundEffect(sfx.first, sfx.second);
 	}
+    for (const auto& voiceline : voicelinefx) {
+        SFX->LoadSoundEffect(voiceline.first, voiceline.second);
+    }
     std::string musicDirectory = "./Music/";
     std::vector<std::string> audioFiles = SFX->GetAudioFiles(musicDirectory);
 
@@ -38,8 +43,18 @@ int main(int argc, char* argv[]) {
     for (const auto& file : audioFiles) {
         std::cout << "Found audio file: " << file << std::endl;
 		if (!SFX->LoadMusic(std::to_string(ids), file)) { SDL_Log("Failed to load music: %s", file.c_str()); }
-        else { SDL_Log("Loaded music: %s", file.c_str()); ids++; }
+        else { SDL_Log("Loaded music: %s", file.c_str()); ids++; SFX->AddToCustom(); }
     }
+    
+    for (const auto& file : ThemeMusics) {
+        std::cout << "Load audio file:" << file.first << std::endl;
+        if (!SFX->LoadMusic(std::to_string(ids), file.first)) { SDL_Log("Failed to load music: %s", file.first); }
+        else {
+            SDL_Log("Loaded music: %s", file.second); ids++; SFX->AddToTheme();
+            SFX->AddThemeInfo(file.second);
+        }
+    }
+
 	std::string voiceLineDirectory = "./Voiceline/";
     std::vector<std::string> voiceline = SFX->GetAudioFiles(voiceLineDirectory);
 
@@ -51,12 +66,36 @@ int main(int argc, char* argv[]) {
 	GUI->LoadElement("Health", HEALTHBARPATH);
 	GUI->LoadElement("Skill", SKILLBARPATH);
 
-    gameLoop(SDL, PLAYER, PATH, &event, Layerdata, SFX, TEXT, GUI);
+	GAMELOOPDATA gamedata = { SDL, PLAYER, PATH, &event, Layerdata, SFX, TEXT, GUI };
 
-    // Clean up
+	GAMESTATE state = MENU;
+
+	while (state != EXIT) {
+		switch (state) {
+		case MENU:
+			state = Menu(SDL, &event, SFX, TEXT, GUI, gamedata);
+			break;
+		case GAME:
+			state = gameLoop(SDL, PLAYER, PATH, &event, Layerdata, SFX, TEXT, GUI);
+			break;
+		case PAUSE:
+			state = GamePause(SDL, &event, SFX, TEXT, GUI, gamedata);
+			break;
+		case LOSS:
+			state = GameOver(SDL, &event, SFX, TEXT, GUI, gamedata);
+			break;
+		default:
+			break;
+		}
+	}
+    
     delete PLAYER;
     delete PATH;
     delete DOG;
+	delete SFX;
+	delete TEXT;
+	delete GUI;
+	delete SDL;
 
     return 0;
 }

@@ -61,7 +61,10 @@ void Player::render(SDL_Renderer* renderer, const int& deltaTime, const float& m
 	else {
 		DrawAnimFrame(renderer, this->texturedata[curr_anim], this->x, this->y, IDs, multipler);
 	}
-	
+}
+
+void Player::DrawFrozen(SDL_Renderer* renderer, const float& multipler) {
+	DrawAnimFrame(renderer, this->texturedata[curr_anim], this->x, this->y, this->texturedata[curr_anim].currentFrame, multipler);
 }
 
 void Player::UpdateIDs(bool isJumping){

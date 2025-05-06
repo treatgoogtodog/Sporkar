@@ -23,11 +23,9 @@ public:
 
     void PlayMusic(const std::string& id, int loops = -1);
 
+    void OneTimeSFX(const std::string& pth);
+
     void StopMusic();
-
-    void PauseMusic();
-
-    void ResumeMusic();
 
     void SetSoundEffectVolume(const std::string& id, int volume);
 
@@ -35,10 +33,29 @@ public:
 
     int GetMusicCount() const;
 
+    int GetCustomCount() const;
+
+    int GetThemeCount() const;
+
     void CleanUp();
+
+    void AddToCustom();
+
+    void AddToTheme();
+
+    void AddThemeInfo(std::string info);
+
+    std::pair<int, int> GetVolume() const;
 
 private:
     std::map<std::string, Mix_Chunk*> soundEffects; 
     std::map<std::string, Mix_Music*> musicTracks;
+
+    int CustomMusicCounter;
+    int ThemeMusicCounter;
+    std::vector<std::string> themeInfo;
+
+    int musicVolume;
+	int soundEffectVolume;
 };
 

@@ -19,15 +19,11 @@
 
 #define HEALTHPOS = {18,22}
 #define SKILLPOS = {18,58}
-enum ObsType {  
-   AIR,  
-   GROUND  
-};  
 
 struct obstacledata {  
    std::string spritepath;  
    std::pair<int, int> size;  
-   ObsType type;
+   int type;
 };  
 
 struct layer {  
@@ -42,4 +38,22 @@ extern std::vector<layer> Layers;
 
 extern std::vector<std::pair<std::string, std::string>> soundfx; 
 
+extern std::vector<std::pair<std::string, std::string>> voicelinefx;
+
 extern std::vector<std::pair<std::string, std::string>> FontPath;
+
+extern std::map<std::string, SDL_Rect> startButton;
+
+extern std::map<std::string, SDL_Rect> hscoreButton;
+
+extern std::map<std::string, SDL_Rect> quitButton;
+
+extern std::vector <std::map<std::string, SDL_Rect>> ButtonState;
+
+extern std::vector <std::pair<std::string, std::string>> ThemeMusics;
+
+//extern std::vector<std::map<std::string, SDL_Rect>> resumeButton;
+//
+//extern std::vector<std::map<std::string, SDL_Rect>> quitsButton;
+//
+//extern std::vector<std::map<std::string, SDL_Rect>> titleButton;
