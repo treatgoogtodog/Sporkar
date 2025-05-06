@@ -13,7 +13,7 @@
 
 
 int main(int argc, char* argv[]) {
-	SDL_Manager* SDL = new SDL_Manager("NegaRun", 800, 600);
+	SDL_Manager* SDL = new SDL_Manager("Sporkars", 800, 600);
 
     if (!SDL->IsInitialized()) {
         std::cout << "Unable to initialize SDL2\nErr:" << SDL_GetError();
