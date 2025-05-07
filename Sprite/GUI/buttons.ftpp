@@ -48,6 +48,26 @@
       "name": "START_IDLE.png",
       "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/START_IDLE.png",
       "folder": ""
+    },
+    {
+      "name": "sound_off.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/sound_off.png",
+      "folder": ""
+    },
+    {
+      "name": "sound_on.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/sound_on.png",
+      "folder": ""
+    },
+    {
+      "name": "sound_slider.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/sound_slider.png",
+      "folder": ""
+    },
+    {
+      "name": "sound_slider_t.png",
+      "path": "C:/Users/FPT/Documents/GitHub/Sporkar/Sprite/GUI/sound_slider_t.png",
+      "folder": ""
     }
   ],
   "folders": [],

@@ -431,7 +431,7 @@ GAMESTATE Menu(SDL_Manager* SDL, SDL_Event* event, SoundManager* SFX, TextHandle
 	 for (auto& i : scoreboard) {
 		 if (renderidx >= 10) { break; }
 		 string scoreText =std::to_string(i);
-		 gamedata.TEXT->RenderText("Default", scoreText, 20, 20 + renderidx * 30, { 0, 0, 0, 255 }, 20);
+		 gamedata.TEXT->RenderText("Default", scoreText, 20, 20 + renderidx * 30, { 0, 0, 0, 255 }, 30);
 		 renderidx++;
 	 }
  }
