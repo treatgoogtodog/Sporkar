@@ -21,8 +21,7 @@ GAMESTATE gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Even
     int scoreupdt = 0;
     uint64_t Score = 0;
     uint64_t Dist = 0;
-    
-    SFX->StopMusic();
+
     SDL_Texture* groundTexture = LoadTexture(SDL->GetRenderer(), GROUNDSPRITEPATH);
 
     while (!quit && !gameover) {
