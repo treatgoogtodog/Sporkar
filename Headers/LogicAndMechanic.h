@@ -26,19 +26,20 @@ struct GAMELOOPDATA {
 	SoundManager* SFX;
 	TextHandler* TEXT;
 	GUIhandler* GUI;
+	bool resetFlag;
 };
 
 using namespace std;
 
 int DRNG(int bot, int top);
 
-GAMESTATE gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Event* event, std::vector<Layer>& backgroundLayers, SoundManager* SFX, TextHandler* TEXT, GUIhandler* GUI);
+GAMESTATE gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Event* event, std::vector<Layer>& backgroundLayers, SoundManager* SFX, TextHandler* TEXT, GUIhandler* GUI, bool& resetFlag);
 
-GAMESTATE GamePause(SDL_Manager* SDL, SDL_Event* event, SoundManager* SFX, TextHandler* TEXT, GUIhandler* GUI, GAMELOOPDATA gamedata);
+GAMESTATE GamePause(SDL_Manager* SDL, SDL_Event* event, SoundManager* SFX, TextHandler* TEXT, GUIhandler* GUI, GAMELOOPDATA& gamedata);
 
-GAMESTATE Menu(SDL_Manager* SDL, SDL_Event* event, SoundManager* SFX, TextHandler* TEXT, GUIhandler* GUI, GAMELOOPDATA gamedata);
+GAMESTATE Menu(SDL_Manager* SDL, SDL_Event* event, SoundManager* SFX, TextHandler* TEXT, GUIhandler* GUI, GAMELOOPDATA& gamedata);
 
-GAMESTATE GameOver(SDL_Manager* SDL, SDL_Event* event, SoundManager* SFX, TextHandler* TEXT, GUIhandler* GUI, GAMELOOPDATA gamedata);
+GAMESTATE GameOver(SDL_Manager* SDL, SDL_Event* event, SoundManager* SFX, TextHandler* TEXT, GUIhandler* GUI, GAMELOOPDATA& gamedata);
 
 void ScoreBoard(GAMELOOPDATA gamedata, string savPth);
 

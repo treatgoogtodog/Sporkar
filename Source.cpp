@@ -76,7 +76,7 @@ int main(int argc, char* argv[]) {
 			state = Menu(SDL, &event, SFX, TEXT, GUI, gamedata);
 			break;
 		case GAME:
-			state = gameLoop(SDL, PLAYER, PATH, &event, Layerdata, SFX, TEXT, GUI);
+			state = gameLoop(gamedata.SDL,gamedata.PLAYER,gamedata.PATH,gamedata.event,gamedata.backgroundLayers,gamedata.SFX,gamedata.TEXT,gamedata.GUI,gamedata.resetFlag);
 			break;
 		case PAUSE:
 			state = GamePause(SDL, &event, SFX, TEXT, GUI, gamedata);

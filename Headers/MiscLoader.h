@@ -51,9 +51,3 @@ extern std::map<std::string, SDL_Rect> quitButton;
 extern std::vector <std::map<std::string, SDL_Rect>> ButtonState;
 
 extern std::vector <std::pair<std::string, std::string>> ThemeMusics;
-
-//extern std::vector<std::map<std::string, SDL_Rect>> resumeButton;
-//
-//extern std::vector<std::map<std::string, SDL_Rect>> quitsButton;
-//
-//extern std::vector<std::map<std::string, SDL_Rect>> titleButton;
