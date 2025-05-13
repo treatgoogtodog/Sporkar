@@ -41,11 +41,21 @@ void PathManager::addNewObject(int x, int y, int width, int height, const std::s
     pathObjects.push_front(toCreate);
 }
 
+void PathManager::addNewPowerUp(int x, int y, int width, int height, const std::string& texturePath, SDL_Renderer* renderer, PowerUpEffect Effect) {
+    PowerUp* toCreate = new PowerUp(texturePath, x, y, width, height, renderer, Effect);
+    if (!toCreate->getTexture()) { SDL_Log("Invalid texture! Aborting Creation"); return; }
+    powerUps.push_front(toCreate);
+}
+
 void PathManager::removeOldObjects(int playerX) {
     while (!pathObjects.empty() && pathObjects.back()->getX() + pathObjects.back()->getWidth() < 0) {
         delete pathObjects.back();
         pathObjects.pop_back();
     }
+	while (!powerUps.empty() && powerUps.back()->getX() + powerUps.back()->getWidth() < 0) {
+		delete powerUps.back();
+		powerUps.pop_back();
+	}
 }
 
 void PathManager::UPDATE(SDL_Renderer* renderer, int speed) {
@@ -55,12 +65,17 @@ void PathManager::UPDATE(SDL_Renderer* renderer, int speed) {
             obj->move(speed / 2);
         }
     }
-
+	for (PowerUp* pwd : powerUps) {
+		pwd->move(speed);
+	}
 }
 
 void PathManager::renderPath(SDL_Renderer* renderer) const {
     for (const BaseObject* obj : pathObjects) {
         obj->render(renderer);
+    }
+    for (const PowerUp* pwd : powerUps) {
+        pwd->render(renderer);
     }
 }
 
@@ -93,6 +108,17 @@ BaseObject* PathManager::checkCollision(Player& player) const {
 	return nullptr;
 }
 
+PowerUp* PathManager::checkPowerUpCollision(Player& player) const {
+	for (PowerUp* pwd : powerUps) {
+		SDL_Rect PlayerHITBOX = { player.getX(), player.getY(), player.getWid(), player.getHei() };
+		SDL_Rect ObjHITBOX = { pwd->getX(), pwd->getY(), pwd->getWidth(), pwd->getHeight() };
+		if (SDL_HasIntersection(&PlayerHITBOX, &ObjHITBOX)) {
+			return pwd;
+		}
+	}
+	return nullptr;
+}
+
 void PathManager::cleanUp() {
     for (BaseObject* obj : pathObjects) {
         delete obj;
@@ -100,25 +126,31 @@ void PathManager::cleanUp() {
     pathObjects.clear();
 }
 
-dog::dog(int x, int y, int width, int height, const std::string& texturePTH, SDL_Renderer* renderer, float multipler) 
-       : x(x), y(y), width(width), height(height), texture(nullptr) { 
-       SDL_Surface* surface = IMG_Load(texturePTH.c_str());
-       if (!surface) {
-           SDL_Log("Failed to load texture: %s", IMG_GetError());
-           return;
-       }
-       this->texturedata = SheetReader(DOGDOGSHEETDATA, DOGDOGSPITEPATH, renderer, this->texture);
-       SDL_FreeSurface(surface);
+PowerUp::PowerUp(const std::string& texturePTH, int x, int y, int width, int height, SDL_Renderer* renderer, PowerUpEffect Effect)
+	: x(x), y(y), width(width), height(height), texture(nullptr), effect(Effect) {
+	SDL_Surface* surface = IMG_Load(texturePTH.c_str());
+	if (!surface) {
+		SDL_Log("Failed to load texture: %s", IMG_GetError());
+		return;
+	}
+	this->texture = SDL_CreateTextureFromSurface(renderer, surface);
+	SDL_FreeSurface(surface);
 }
 
-dog::~dog() {
+PowerUp::~PowerUp() {
 	if (texture) {
 		SDL_DestroyTexture(texture);
 	}
 }
 
-void dog::render(SDL_Renderer* renderer, const int& deltaTime, const float& multipler) {
-    UpdateAnimation(this->texturedata["Drive"], deltaTime);
-    float multi = this->getWidth() / this->texturedata["Drive"].frames.at(texturedata["Drive"].currentFrame).width;
-	DrawAnimation(renderer, this->texturedata["Drive"], this->x, this->y, multi);
+void PowerUp::render(SDL_Renderer* renderer) const {
+	SDL_Rect destRect = { x, y, width, height };
+    if (this->reg) { return; }
+	if (texture) {
+		SDL_RenderCopy(renderer, texture, nullptr, &destRect);
+	}
+}
+
+void PowerUp::move(int speed) {
+	this->x -= speed;
 }

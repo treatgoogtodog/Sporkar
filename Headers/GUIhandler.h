@@ -19,6 +19,7 @@ public:
 	void LoadOverLay(const std::string& texturePath);
 	void LoadElement(const std::string& id, const std::string& texturePath);
 	void render(SDL_Renderer* renderer,float HealthP, float SkillP);
+	void RenderSingle(SDL_Renderer* renderer, std::string& id, int x = 0, int y = 0, int w = 0, int h = 0);
 private:
 	SDL_Texture* OverLay;
 	map<string, SDL_Texture*> ElementTXT;

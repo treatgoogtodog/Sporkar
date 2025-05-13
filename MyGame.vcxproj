@@ -194,6 +194,8 @@
     <Image Include="Sprite\GUI\START_IDLE.png" />
     <Image Include="Sprite\Levietha.png" />
     <Image Include="Sprite\PlayerSpr\BlackinMan.png" />
+    <Image Include="Sprite\PowerUp\Hyper.png" />
+    <Image Include="Sprite\PowerUp\Nuke.png" />
     <Image Include="Sprite\TralaleloTralala.png" />
   </ItemGroup>
   <ItemGroup>
@@ -201,12 +203,19 @@
     <Text Include="Mappdata.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Media Include="SFX\click.wav" />
+    <Media Include="SFX\hover.wav" />
     <Media Include="SFX\HURT1.wav" />
     <Media Include="SFX\HURT2.wav" />
     <Media Include="SFX\HURT3.wav" />
     <Media Include="SFX\HURT4.wav" />
+    <Media Include="SFX\hyper1.wav" />
+    <Media Include="SFX\hyper2.wav" />
     <Media Include="SFX\JUMP1.wav" />
     <Media Include="SFX\JUMP2.wav" />
+    <Media Include="SFX\pickup1.wav" />
+    <Media Include="SFX\pickup2.wav" />
+    <Media Include="SFX\select.wav" />
     <Media Include="TMusic\d4vd - Feel It.mp3" />
     <Media Include="TMusic\Evanescence - Afterlife.mp3" />
     <Media Include="TMusic\Let It Happen.mp3" />

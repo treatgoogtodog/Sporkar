@@ -24,6 +24,7 @@ public:
     int getWid() const { return width; }
     int getHei() const { return height; }
 	void setAlpha(int alpha) { SDL_SetTextureAlphaMod(texture, alpha); }
+	void setColorMod(int r, int g, int b) { SDL_SetTextureColorMod(texture, r, g, b); }
 private:
     int x, y;
     float multipler;

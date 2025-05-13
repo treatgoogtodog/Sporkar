@@ -5,10 +5,45 @@
 #include <SDL_image.h>
 #include <deque>
 #include <string>
-#include "MiscLoader.h"
 #include "CharacterSystem.h"
 #include "JsonParsers.h"
 
+
+enum PowerUpEffect {
+	NONE,
+    HYPER,
+    NUKE,
+    GAMBLE
+};
+
+class BaseObject;
+class PowerUp;
+class dog;
+
+class PathManager {
+public:
+    void addNewObject(int x, int y, int width, int height, const std::string& texturePath, SDL_Renderer* renderer, int type);
+
+    void addNewPowerUp(int x, int y, int width, int height, const std::string& texturePath, SDL_Renderer* renderer, PowerUpEffect Effect);
+
+    void removeOldObjects(int playerX);
+
+    void renderPath(SDL_Renderer* renderer) const;
+
+    void renderGround(SDL_Renderer* renderer, SDL_Texture* texture, int offset) const;
+
+    void UPDATE(SDL_Renderer* renderer, int speed);
+
+    BaseObject* checkCollision(Player& player) const;
+
+	PowerUp* checkPowerUpCollision(Player& player) const;
+
+    void cleanUp();
+
+private:
+    std::deque<BaseObject*> pathObjects; 
+	std::deque<PowerUp*> powerUps; // Only one powerup at a time but easier to manage along with obstacles
+};
 
 class BaseObject {
 public:
@@ -22,48 +57,32 @@ public:
     int getY() const { return y; }
     int getWidth() const { return width; }
     int getHeight() const { return height; }
-	int getType() const { return type; }
+    int getType() const { return type; }
     SDL_Texture* getTexture() const { return texture; };
     bool reg;
 
 private:
     int x, y, width, height;
-    SDL_Texture* texture;    
-	int type;
-};
-
-class PathManager {
-public:
-    void addNewObject(int x, int y, int width, int height, const std::string& texturePath, SDL_Renderer* renderer, int type);
-
-    void removeOldObjects(int playerX);
-
-    void renderPath(SDL_Renderer* renderer) const;
-
-    void renderGround(SDL_Renderer* renderer, SDL_Texture* texture, int offset) const;
-
-    void UPDATE(SDL_Renderer* renderer, int speed);
-
-    BaseObject* checkCollision(Player& player) const;
-
-    void cleanUp();
-
-private:
-    std::deque<BaseObject*> pathObjects; 
-};
-
-class dog {
-private:
-    int x, y, width, height;
     SDL_Texture* texture;
-	std::map<std::string, Animation> texturedata;
+    int type;
+};
+
+class PowerUp {
 public:
-    dog(int x, int y,int width,int height, const std::string& texturePTH, SDL_Renderer* renderer, float multipler);
-    ~dog();
-    void render(SDL_Renderer* renderer, const int& deltaTime, const float& multipler);
-    int getX() const { return x; }
-    int getY() const { return y; }
-    int getWidth() const { return width; }
-    int getHeight() const { return height; };
+	PowerUp(const std::string& texturePath, int x, int y, int width, int height, SDL_Renderer* renderer, PowerUpEffect Effect);
+	~PowerUp();
+	void render(SDL_Renderer* renderer) const;
+	void move(int speed);
+	int getX() const { return x; }
+	int getY() const { return y; }
+	int getWidth() const { return width; }
+	int getHeight() const { return height; }
+	PowerUpEffect getEffect() const { return effect; }
+	SDL_Texture* getTexture() const { return texture; }
     
+    bool reg = false;
+private:
+	int x, y, width, height;
+	SDL_Texture* texture;
+	PowerUpEffect effect;
 };
