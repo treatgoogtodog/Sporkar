@@ -15,6 +15,12 @@ std::vector<obstacledata> obstacle = {
 	{"Sprite/aerialobs/bullet2.png",{100,32}, 0}
 };
 
+std::vector<PowerUpdata> powerup = {
+	{"Sprite/PowerUp/Hyper.png", {48, 48}, HYPER },
+	{ "Sprite/PowerUp/Nuke.png", {48, 48}, NUKE },
+	{ "Sprite/PowerUp/Gamble.png", {48, 48}, GAMBLE }
+};
+
 std::vector<layer> Layers = {
      {"Sprite/Bg/1.png", 0.1f, 0},  
     {"Sprite/Bg/2.png", 0.25f, 0},
@@ -32,7 +38,9 @@ std::vector<std::pair<std::string, std::string>> soundfx = {
     {"jump2","SFX/JUMP2.wav"},
 	{"click","SFX/click.wav"},
 	{"hover","SFX/hover.wav"},
-	{"select","SFX/select.wav"}
+	{"select","SFX/select.wav"},
+	{"pickup1","SFX/pickup1.wav"},
+	{"pickup2","SFX/pickup2.wav"}
 };
 
 std::vector<std::pair<std::string, std::string>> voicelinefx = {

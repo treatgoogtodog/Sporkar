@@ -5,6 +5,7 @@
 #include "Animation.h"  
 #include <SDL_mixer.h>  
 #include "TextHandler.h"
+#include "Object.h"
 
 
 #define PLAYERSPRITEPATH "Sprite\\PlayerSpr\\BlackinMan.png"  
@@ -13,6 +14,7 @@
 #define DOGDOGSPITEPATH "Sprite\\Dogdog.png"  
 #define DOGDOGSHEETDATA "Sprite\\Dogdog.json"  
 
+#define WINDUPOVERLAY "Sprite\\GUI\\WindUpOverlay"
 #define OVERLAYPATH "Sprite\\GUI\\Overlay.png"
 #define HEALTHBARPATH "Sprite\\GUI\\Health.png"
 #define SKILLBARPATH "Sprite\\GUI\\Skill.png"
@@ -26,6 +28,12 @@ struct obstacledata {
    int type;
 };  
 
+struct PowerUpdata {
+	std::string spritepath;
+	std::pair<int, int> size;
+	PowerUpEffect Effect;
+};
+
 struct layer {  
    std::string spritepath;  
    float speed;  
@@ -33,6 +41,8 @@ struct layer {
 };  
 
 extern std::vector<obstacledata> obstacle;  
+
+extern std::vector<PowerUpdata> powerup;
 
 extern std::vector<layer> Layers;  
 

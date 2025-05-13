@@ -20,6 +20,15 @@ GAMESTATE gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Even
 	static int scoreupdt = 0;
 	static uint64_t Score = 0;
 	static uint64_t Dist = 0;
+	static int failCount = 0;
+	static int MaxFail = 5;
+	static PowerUpEffect CurrentEffect = NONE;
+	static bool speedOverDrive = false;
+	static int SpeedOverDriveTime = 10000;
+	static int SpeedOverDriveStart = 0;
+	static int SpeedWindUp = 3000;
+	static int NukeDelay = 5000;
+	static int NukeTimer = -1;
 
 	if (resetFlag) {
 		intervalSpawn = 1200;
@@ -38,6 +47,9 @@ GAMESTATE gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Even
 		scoreupdt = 0;
 		Score = 0;
 		Dist = 0;
+		failCount = 0;
+		CurrentEffect = NONE;
+		speedOverDrive = false;
 		PATH->cleanUp();
 		resetFlag = false;
 	}
@@ -86,6 +98,7 @@ GAMESTATE gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Even
 
 		if (SkillCooldownTime < 0) {
 			SkillCooldownTime = 0;
+			
 		}
 
 		if (SDL->IsKeyDown(SDL_SCANCODE_C)) {
@@ -117,10 +130,32 @@ GAMESTATE gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Even
 			displaySkillBar = static_cast<float>(SkillCooldown - SkillCooldownTime) / SkillCooldown;
 			PLAYER->setAlpha(255);
 		}
-		if (gameTime >= 3000) {
-			speed += 1;
-			gameTime = 0;
-			speed = SDL_clamp(speed, 5, 20);
+		if (!speedOverDrive) {
+			PLAYER->setColorMod(255, 255, 255);
+			if (gameTime >= 3000) {
+				speed += 1;
+				gameTime = 0;
+				speed = SDL_clamp(speed, 5, 20);
+			}
+		}
+
+		if (speedOverDrive) {
+			SpeedOverDriveStart += deltaTime;
+			PLAYER->setColorMod(52, 189, 255);
+			if (SpeedOverDriveStart <= SpeedWindUp) {
+				speed = 1; 
+				std::string W = "WindUp";
+				GUI->RenderSingle(SDL->GetRenderer(), W);
+			}
+			else {
+				speed = 35;
+				if (SpeedOverDriveStart >= SpeedWindUp + SpeedOverDriveTime) {
+					speedOverDrive = false;
+					SpeedOverDriveStart = 0;
+					speed = SDL_clamp(speed, 5, 20);
+					CurrentEffect = NONE;
+				}
+			}
 		}
 		TEXT->RenderText("Default", "Speed: " + std::to_string(speed), 10, 50, { 255, 0, 0, 255 }, 30);
 
@@ -128,67 +163,120 @@ GAMESTATE gameLoop(SDL_Manager* SDL, Player* PLAYER, PathManager* PATH, SDL_Even
 		spawnTime += deltaTime;
 
 		if (spawnTime >= intervalSpawn) {
-			int randomIndex = DRNG(0, obstacle.size() - 1);
-			int spany = (obstacle[randomIndex].type == 0) ? groundLevel + 100 : groundLevel;
-			PATH->addNewObject(800, spany, obstacle[randomIndex].size.first, obstacle[randomIndex].size.second, obstacle[randomIndex].spritepath, SDL->GetRenderer(), obstacle[randomIndex].type);
+			int roll = DRNG(1, 1000);
+			if (roll > 950) {
+				int randomIndex = DRNG(0, powerup.size() - 1);
+				PATH->addNewPowerUp(800, groundLevel - 80, powerup[randomIndex].size.first, powerup[randomIndex].size.second, powerup[randomIndex].spritepath, SDL->GetRenderer(), powerup[randomIndex].Effect);
+				failCount = 0;
+			}
+			else {
+				int randomIndex = DRNG(0, obstacle.size() - 1);
+				int spany = (obstacle[randomIndex].type == 0) ? groundLevel - 100 : groundLevel;
+				PATH->addNewObject(800, spany, obstacle[randomIndex].size.first, obstacle[randomIndex].size.second, obstacle[randomIndex].spritepath, SDL->GetRenderer(), obstacle[randomIndex].type);	
+				failCount++;
+			}
 			spawnTime = DRNG(0, 700);
 		}
 
-		BaseObject* collisionObject = PATH->checkCollision(*PLAYER);
-		if ((collisionObject != nullptr) && !collisionObject->reg && !usingSkill) {
-			collisionObject->reg = true;
-			std::cout << "Player Health: " << PLAYER->health << std::endl;
-			string ToPlay = "hurt" + std::to_string(rand() % 4 + 1);
+		if (speed <= 20 && speed > 5) {
+			BaseObject* collisionObject = PATH->checkCollision(*PLAYER);
+			if ((collisionObject != nullptr) && !collisionObject->reg && !usingSkill) {
+				collisionObject->reg = true;
+				std::cout << "Player Health: " << PLAYER->health << std::endl;
+				string ToPlay = "hurt" + std::to_string(rand() % 4 + 1);
+				SFX->PlaySoundEffect(ToPlay);
+				Score -= 100;
+				PLAYER->health -= 12 + speed / 10;
+				speed = SDL_clamp(speed - 5, 5, 20);
+			}
+		}
+		PowerUp* collisionPowerUp = PATH->checkPowerUpCollision(*PLAYER);
+		if (collisionPowerUp != nullptr && !collisionPowerUp->reg) {
+			collisionPowerUp->reg = true;
+			string ToPlay = "pickup" + std::to_string(rand() % 2 + 1);
 			SFX->PlaySoundEffect(ToPlay);
-			Score -= 100;
-			PLAYER->health -= 12 + speed / 10;
-			speed = SDL_clamp(speed - 5, 5, 20);
+			CurrentEffect = collisionPowerUp->getEffect();
+			switch (CurrentEffect) {
+			case HYPER: {
+				speedOverDrive = true;
+				speed = 0;
+				SFX->PlaySoundEffect("hyper" + to_string(DRNG(1, 2)));
+				break;
+			}
+			case NUKE: {
+				PATH->cleanUp();
+				break;
+			}
+			case GAMBLE: {
+				int roll = DRNG(1, 100);
+				if (roll > 50) {
+					PLAYER->health += 20;
+					Score = Score * 2;
+					speed += 5;
+					speed = SDL_clamp(speed, 5, 20);
+				}
+				else {
+					PLAYER->health -= 20;
+					Score = Score / 2;
+					speed = SDL_clamp(speed, 5, 20);
+				}
+				break;
+			}
+			}
 		}
+			PLAYER->health = SDL_clamp(PLAYER->health, 0, 100);
+			if (PLAYER->health <= 0) {
+				gameover = true;
+			}
 
-		PLAYER->health = SDL_clamp(PLAYER->health, 0, 100);
-		if (PLAYER->health <= 0) {
-			gameover = true;
+			if (jump) {
+				string ToPlay = "jump" + std::to_string(rand() % 2 + 1);
+				SFX->PlaySoundEffect(ToPlay);
+			}
+
+			if (scoreupdt >= 100) {
+				srand(SDL_GetTicks());
+				Score += static_cast<int>(speed * (rand() * 2 / 1000));
+				scoreupdt = 0;
+				Dist += speed;
+				distupdt = 0;
+			}
+
+			PATH->renderPath(SDL->GetRenderer());
+			PLAYER->render(SDL->GetRenderer(), (deltaTime*speed)/12, 1.5f);
+			GUI->render(SDL->GetRenderer(), static_cast<float>(PLAYER->health) / 100, displaySkillBar);
+			TEXT->RenderText("Bold", std::to_string(Score), 30, 500, { 255, 0, 0, 255 }, 30);
+			TEXT->RenderText("Default", std::to_string(Dist), 390, 30, { 255, 0, 0, 255 }, 30);
+			TEXT->RenderText("Default", std::to_string(speed), 525, 30, { 255, 0, 0, 255 }, 20);
+
+			if (speedOverDrive) {
+				if (SpeedOverDriveStart <= SpeedWindUp) {
+					speed = 1;
+					std::string W = "WindUp";
+					GUI->RenderSingle(SDL->GetRenderer(), W);
+				}
+			}
+
+			SDL_RenderPresent(SDL->GetRenderer());
+
+			int delayTime = 16 - deltaTime;
+			if (delayTime < 0) {
+				delayTime = 0;
+			}
+			SDL_Delay(delayTime);
+			previousTime = currentTime;
+			gameTime += deltaTime;
+			scoreupdt += deltaTime;
+			distupdt += deltaTime;
+			SkillCooldownTime -= deltaTime;
+
 		}
-
-		if (jump) {
-			string ToPlay = "jump" + std::to_string(rand() % 2 + 1);
-			SFX->PlaySoundEffect(ToPlay);
+		if (gameover) {
+			WriteScore(".sav", Score);
+			return LOSS;
 		}
-
-		if (scoreupdt >= 100) {
-			srand(SDL_GetTicks());
-			Score += static_cast<int>(speed * (rand() * 2 / 1000));
-			scoreupdt = 0;
-			Dist += speed;
-			distupdt = 0;
-		}
-
-		PATH->renderPath(SDL->GetRenderer());
-		PLAYER->render(SDL->GetRenderer(), deltaTime, 1.5f);
-		GUI->render(SDL->GetRenderer(), static_cast<float>(PLAYER->health) / 100, displaySkillBar);
-		TEXT->RenderText("Bold", std::to_string(Score), 30, 500, { 255, 0, 0, 255 }, 30);
-		TEXT->RenderText("Default", std::to_string(Dist), 390, 30, { 255, 0, 0, 255 }, 30);
-		TEXT->RenderText("Default", std::to_string(speed), 525, 30, { 255, 0, 0, 255 }, 20);
-		SDL_RenderPresent(SDL->GetRenderer());
-
-		int delayTime = 16 - deltaTime;
-		if (delayTime < 0) {
-			delayTime = 0;
-		}
-		SDL_Delay(delayTime);
-		previousTime = currentTime;
-		gameTime += deltaTime;
-		scoreupdt += deltaTime;
-		distupdt += deltaTime;
-		SkillCooldownTime -= deltaTime;
-
-	}
-	if (gameover) {
-		WriteScore(".sav", Score);
-		return LOSS;
-	}
-	SFX->StopMusic();
-	return MENU;
+		SFX->StopMusic();
+		return MENU;
 }
 
 int DRNG(int bot, int top) {

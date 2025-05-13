@@ -21,7 +21,6 @@ int main(int argc, char* argv[]) {
     }
 	GUIhandler* GUI = new GUIhandler(SDL->GetRenderer(), SDL->GetWidth(), SDL->GetHeight());
 	SoundManager* SFX =new SoundManager();
-    dog* DOG = new dog(50, 300, 100, 100, DOGDOGSPITEPATH, SDL->GetRenderer(), 0.3f);
 	Player* PLAYER = new Player(250, 300, PLAYERSPRITEPATH, PLAYERSPRITESHEETDATA, SDL->GetRenderer(), 1.2f);
 	TextHandler* TEXT = new TextHandler(SDL->GetRenderer());
     PathManager* PATH = new PathManager();
@@ -62,6 +61,7 @@ int main(int argc, char* argv[]) {
 		TEXT->LoadFont(font.first, font.second, 20);
 	}
 
+	GUI->LoadElement("WindUp", WINDUPOVERLAY);
 	GUI->LoadOverLay(OVERLAYPATH);
 	GUI->LoadElement("Health", HEALTHBARPATH);
 	GUI->LoadElement("Skill", SKILLBARPATH);
@@ -74,15 +74,19 @@ int main(int argc, char* argv[]) {
 		switch (state) {
 		case MENU:
 			state = Menu(SDL, &event, SFX, TEXT, GUI, gamedata);
+			SDL_Log("Current: Menu");
 			break;
 		case GAME:
 			state = gameLoop(gamedata.SDL,gamedata.PLAYER,gamedata.PATH,gamedata.event,gamedata.backgroundLayers,gamedata.SFX,gamedata.TEXT,gamedata.GUI,gamedata.resetFlag);
+			SDL_Log("Current: Game");
 			break;
 		case PAUSE:
 			state = GamePause(SDL, &event, SFX, TEXT, GUI, gamedata);
+			SDL_Log("Current: Pause");
 			break;
 		case LOSS:
 			state = GameOver(SDL, &event, SFX, TEXT, GUI, gamedata);
+			SDL_Log("Current: GameOver");
 			break;
 		default:
 			break;
@@ -91,7 +95,6 @@ int main(int argc, char* argv[]) {
     
     delete PLAYER;
     delete PATH;
-    delete DOG;
 	delete SFX;
 	delete TEXT;
 	delete GUI;

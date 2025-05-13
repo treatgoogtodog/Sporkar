@@ -35,6 +35,23 @@ void GUIhandler::LoadElement(const std::string& id, const std::string& texturePa
 	}
 	ElementTXT[id] = texture;
 }
+
+void GUIhandler::RenderSingle(SDL_Renderer* renderer, std::string& id, int x, int y, int w, int h) {
+	SDL_Rect* destRect;
+	if (w == 0 && h == 0) {
+		destRect = NULL;
+	}
+	else {
+		destRect = new SDL_Rect();
+		destRect->x = x;
+		destRect->y = y;
+		destRect->w = w;
+		destRect->h = h;
+	}
+	
+	SDL_RenderCopy(renderer, ElementTXT[id], nullptr, destRect);
+}
+
 void GUIhandler::render(SDL_Renderer* renderer, float HealthP, float SkillP) {
 	if (OverLay) {
 		SDL_RenderCopy(renderer, OverLay, nullptr, nullptr);
