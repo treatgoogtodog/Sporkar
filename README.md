@@ -1,13 +1,5 @@
 # Sporkars
 
-## Nguyễn Ngọc Bảo - 24022768
-
-**Sporkar** là một tựa game lấy bối cảnh hậu tận thế, trong đó nhân vật chính là một người di cư lánh nạn từ vùng Nam Mĩ xuống Mexico. Người điều khiển cần phải điều khiển nhân vật vượt qua vật cản, đi xa nhất có thể, nhân vật chính có khả năng tránh né mọi vật cản trong thời gian ngắn.
-
-# Ngưỡng điểm nhắm tới 8.5 - 9.5
-- Thuật toán kiểm tra va chạm [AABB](https://en.wikipedia.org/wiki/Bounding_volume#:~:text=In%20many%20applications,to%20be%20recomputed.) kiểm tra va chạm theo hệ trục toạ độ.
--Thuật toán
-
 - Game có đồ hoạ tương đối đơn giản, sử dụng animation cho nhân vật, các vật cản và GUI là tự vẽ bằng [Asesprite](https://www.aseprite.org/). Các thành phần GUI và Texture nhân vật được vẽ và mapping sử sụng [Free Texture Packer](https://free-tex-packer.com/app/) để giảm thiểu số lượng texture cần sử dụng.
 - Cơ chế mang sự tương đồng với [Dino](https://chromedino.com/), được cải tiến nhiều mặt về hình ảnh âm thanh và cơ chế.
 ### Các tính năng được thêm vào:
